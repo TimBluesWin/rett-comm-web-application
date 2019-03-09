@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<style type="text/css">
+		.heatmap-wrapper {
+			position: absolute;
+			left: 0;
+			top: 0;
+			-webkit-transition: .3s ease all;
+			-moz-transition: .3s ease all;
+			transition: .3s ease all;
+		}
+
+		.heatmap {
+			width: 100%;
+			height: 100%;
+
+		}
+		
+		.heatmap-canvas {
+			margin-left: 30px;
+			margin-right: 30px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			background-color: lightblue;
+		}
+		</style>
+
+	</head>
+	<body>
+		<div class="heatmap-wrapper" style="width: 1350px; height: 1500px;">
+		<div class="heatmap" style="position: relative;">
+
+			<canvas width="1350" height="1499" class="heatmap-canvas" style="left: 0px; top: 0px; position: absolute;">
+				<div class="pictures">
+				</div>
+			</canvas>
+		</div>
+		</div>
+		<script src="heatmap.js"></script>
+		<script>
+		
+		window.requestAnimationFrame = (function(){
+          return  window.requestAnimationFrame       ||
+                  window.webkitRequestAnimationFrame ||
+                  window.mozRequestAnimationFrame    ||
+                  function( callback ){
+                    window.setTimeout(callback, 1000 / 60);
+                  };
+        })();
+		//var thisCanvas = document.getElementById("heatmap-canvas");
+		//var canvasWidth = thisCanvas.offsetWidth;
+		//var canvasHeight = thisCanvas.offsetHeight;
+		var timesLeft = 0;
+		var timesRight = 0;
+		// create instance
+        var body = document.body;
+        var bodyStyle = getComputedStyle(body);
+        var hmEl = document.querySelector('.heatmap-wrapper');
+
+        hmEl.style.width = bodyStyle.width;
+        hmEl.style.height = bodyStyle.height;
+
+        var hm = document.querySelector('.heatmap');
+
+        var heatmap = h337.create({
+		
+          container: hm,
+          radius: 60,
+        });
+
+
+        var trackData = false;
+
+        setInterval(function() {
+          trackData = true;
+        }, 50);
+
+        var idleTimeout, idleInterval;
+
+        var lastX, lastY;
+        var idleCount;
+
+        function startIdle() {
+          idleCount = 0;
+          function idle() {
+            heatmap.addData({
+              x: lastX,
+              y: lastY
+            });
+            idleCount++;
+            if (idleCount > 10) {
+              clearInterval(idleInterval);
+            }
+          };
+          idle();
+		  //if(lastX < 
+          idleInterval = setInterval(idle, 1000);
+        };
+
+
+
+        body.onmousemove = function(ev) {
+          if (idleTimeout) clearTimeout(idleTimeout);
+          if (idleInterval) clearInterval(idleInterval);
+
+          if (trackData) {
+            lastX = ev.pageX;
+            lastY = ev.pageY;
+            heatmap.addData({
+              x: lastX,
+              y: lastY
+            });
+            trackData = false;
+          }
+          idleTimeout = setTimeout(startIdle, 500);
+        };
+		</script>
+	</body>
+</html>
