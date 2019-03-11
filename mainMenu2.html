@@ -1,6 +1,8 @@
+<meta charset="utf-8"/>
 <html>
 	<head>
 		<style type="text/css">
+		
 		.heatmap-wrapper {
 			position: absolute;
 			left: 0;
@@ -16,25 +18,40 @@
 
 		}
 		
-		.heatmap-canvas {
-			margin-left: 30px;
-			margin-right: 30px;
-			margin-top: 30px;
-			margin-bottom: 30px;
-			background-color: lightblue;
+
+			.option {
+				float:left;
+				width:50%;
+		  height:100%
+			}
+
+		.pictures::after {
+		  content:"";
+		  clear: both;
+		  display: table;
+		}
+		
+		 html,body{
+			height:100%;
 		}
 		</style>
 
 	</head>
 	<body>
-		<div class="heatmap-wrapper" style="width: 1350px; height: 1500px;">
-		<div class="heatmap" style="position: relative;">
+		<div class="heatmap-wrapper" style="width: 100%; height: 100%;">
+			<div class="heatmap" style="position: absolute;">
 
-			<canvas width="1350" height="1499" class="heatmap-canvas" style="left: 0px; top: 0px; position: absolute;">
-				<div class="pictures">
+				<canvas width="100%" height="100%" class="heatmap-canvas" style="z-index=2; opacity: 0; left: 0px; top: 0px; position: absolute;">
+				</canvas>
+				<div class="pictures" style="width:100%; height:100%; z-index=1;">
+					<div class="option">
+						<img src="makan.jpg" style="width:100%; height:100%; transform:rotate(90deg)">
+					</div>
+					<div class="option">
+						<img src="minum.jpg" style="width:100%; height:100%; transform:rotate(90deg)">
+					</div>
 				</div>
-			</canvas>
-		</div>
+			</div>
 		</div>
 		<script src="heatmap.js"></script>
 		<script>
@@ -93,7 +110,7 @@
             }
           };
           idle();
-		  //if(lastX < 
+		  //if(lastX <  
           idleInterval = setInterval(idle, 1000);
         };
 
