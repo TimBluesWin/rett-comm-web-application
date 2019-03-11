@@ -19,11 +19,11 @@
 		}
 		
 
-			.option {
-				float:left;
-				width:50%;
-		  height:100%
-			}
+		.option {
+			float:left;
+			width:50%;
+			height:100%;
+		}
 
 		.pictures::after {
 		  content:"";
@@ -71,6 +71,7 @@
 		var timesRight = 0;
 		// create instance
         var body = document.body;
+		var width = body.clientWidth;
         var bodyStyle = getComputedStyle(body);
         var hmEl = document.querySelector('.heatmap-wrapper');
 
@@ -110,7 +111,7 @@
             }
           };
           idle();
-		  //if(lastX <  
+		  //if(lastX < 
           idleInterval = setInterval(idle, 1000);
         };
 
