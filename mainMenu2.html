@@ -111,7 +111,6 @@
             }
           };
           idle();
-		  //if(lastX < 
           idleInterval = setInterval(idle, 1000);
         };
 
@@ -130,8 +129,30 @@
             });
             trackData = false;
           }
+		  if(lastX < width / 2)
+		  {
+			timesLeft = timesLeft + 1;
+			console.log("Left : " + timesLeft + "\n");
+		  }
+		  else
+		  {
+			timesRight = timesRight + 1;
+			console.log("Right : " + timesRight + "\n");
+		  }
           idleTimeout = setTimeout(startIdle, 500);
         };
+		
+		setInterval(function() 
+		{
+			if(timesLeft >= timesRight)
+			{
+				alert("You choose Left!");
+			}
+			else
+			{
+				alert("You choose Right!");
+			}
+		},10*1000)
 		</script>
 	</body>
 </html>
