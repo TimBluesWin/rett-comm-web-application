@@ -18,7 +18,23 @@
 
 		}
 		
-
+		.optionTextLeft {
+			position: absolute;
+			bottom: 5%;
+			left: 25%;
+			transform: translate(-50%, -50%);
+			background-color: white;
+			font-size: 36px
+		}
+		
+		.optionTextRight {
+			position: absolute;
+			bottom: 5%;
+			left: 75%;
+			transform: translate(-50%, -50%);
+			background-color: white;
+			font-size: 36px
+		}
 		.option {
 			float:left;
 			width:50%;
@@ -46,9 +62,11 @@
 				<div class="pictures" style="width:100%; height:100%; z-index=1;">
 					<div class="option">
 						<img src="makan.jpg" style="width:100%; height:100%; transform:rotate(90deg)">
+						<div class="optionTextLeft">Makan</div>
 					</div>
 					<div class="option">
 						<img src="minum.jpg" style="width:100%; height:100%; transform:rotate(90deg)">
+						<div class="optionTextRight">Minum</div>
 					</div>
 				</div>
 			</div>
@@ -152,6 +170,10 @@
 			{
 				alert("You choose Right!");
 			}
+			
+			timesLeft = 0;
+			timesRight = 0;
+			heatmap.setData({data:[]});
 		},10*1000)
 		</script>
 	</body>
