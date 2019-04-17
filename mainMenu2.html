@@ -172,16 +172,19 @@
 		
 		setInterval(function() 
 		{
-			if(timesLeft >= timesRight)
+			if(timesLeft >= timesRight * 7/3)
 			{
-				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextLeft").textContent;
+				window.location.href = 'makanapa.html'
 				
+			}
+			else if(timesRight >= timesLeft * 7/3)
+			{
+				window.location.href = 'minumapa.html'
 			}
 			else
 			{
-				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextRight").textContent;
+				window.location.href = 'adl2.html';
 			}
-			
 			timesLeft = 0;
 			timesRight = 0;
 			heatmap.setData({data:[]});
