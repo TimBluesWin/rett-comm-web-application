@@ -97,6 +97,7 @@
 		//var canvasHeight = thisCanvas.offsetHeight;
 		var timesLeft = 0;
 		var timesRight = 0;
+		var notDetected = 0;
 		// create instance
         var body = document.body;
 		var width = body.clientWidth;
@@ -160,19 +161,25 @@
 		  if(lastX < width / 2)
 		  {
 			timesLeft = timesLeft + 1;
-			console.log("Left : " + timesLeft + "\n");
+			
 		  }
-		  else
+		  else if(lastX >= width / 2)
 		  {
 			timesRight = timesRight + 1;
-			console.log("Right : " + timesRight + "\n");
+			
 		  }
+
+		  //console.log("LastY " + lastY + "\n");
           idleTimeout = setTimeout(startIdle, 500);
         };
 		
 		setInterval(function() 
 		{
-			if(timesLeft >= timesRight * 7/3)
+			if(timesLeft < 10 && timesRight < 10)
+			{
+			    window.location.href = 'adl2.html'
+			}
+			else if(timesLeft >= timesRight * 7/3)
 			{
 				window.location.href = 'makanapa.html'
 				

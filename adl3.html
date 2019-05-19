@@ -97,6 +97,7 @@
 		//var canvasHeight = thisCanvas.offsetHeight;
 		var timesLeft = 0;
 		var timesRight = 0;
+		var timesCenter = 0;
 		var notDetected = 0;
 		// create instance
         var body = document.body;
@@ -158,15 +159,19 @@
             });
             trackData = false;
           }
-		  if(lastX < width / 2)
+		  if(lastX < width * 0.45)
 		  {
 			timesLeft = timesLeft + 1;
 			console.log("Left : " + timesLeft + "\n");
 		  }
-		  else
+		  else if(lastX > width * 0.55)
 		  {
 			timesRight = timesRight + 1;
 			console.log("Right : " + timesRight + "\n");
+		  }
+		  else
+		  {
+			notDetected = notDetected + 1;
 		  }
           idleTimeout = setTimeout(startIdle, 500);
         };
@@ -177,12 +182,12 @@
 			{
 				document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
 			}
-			else if(timesLeft >= timesRight * 7/3)
+			else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
 			{
 				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextLeft").textContent;
 				
 			}
-			else if(timesRight >= timesLeft * 7/3)
+			else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
 			{
 				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextRight").textContent;
 			}

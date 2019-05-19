@@ -97,6 +97,7 @@
 		//var canvasHeight = thisCanvas.offsetHeight;
 		var timesLeft = 0;
 		var timesRight = 0;
+		var notDetected = 0;
 		// create instance
         var body = document.body;
 		var width = body.clientWidth;
@@ -172,7 +173,11 @@
 		
 		setInterval(function() 
 		{
-			if(timesLeft >= timesRight * 7/3)
+		    if(timesLeft < 10 && timesRight < 10)
+			{
+			    document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain"
+			}
+			else if(timesLeft >= timesRight * 7/3)
 			{
 				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextLeft").textContent;
 				
@@ -187,6 +192,7 @@
 			}
 			timesLeft = 0;
 			timesRight = 0;
+			notDetected = 0;
 			heatmap.setData({data:[]});
 		},10*1000)
 		</script>
