@@ -1,6 +1,6 @@
 <meta charset="utf-8"/>
-<html>
-	<head>
+<html lang="id">
+	<head title="Rett Comm">
 		<style type="text/css">
 		
 		.heatmap-wrapper {
@@ -60,6 +60,7 @@
 			height:100%;
 		}
 		</style>
+		<title></title>
 
 	</head>
 	<body>
@@ -71,11 +72,11 @@
 				<div class="pictures" style="width:100%; height:100%; z-index:1;">
 					<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
 					<div class="option">
-						<img src="minumaqua.jpg" style="width:100%; height:100%; transform:rotate(90deg)">
+						<img src="minumaqua.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="Minum Air Putih">
 						<div class="optionTextLeft" id="optionTextLeft">Minum Air Putih</div>
 					</div>
 					<div class="option">
-						<img src="minumsusu.jpg" style="width:100%; height:100%; transform:rotate(90deg)">
+						<img src="minumsusu.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="Minum Susu">
 						<div class="optionTextRight" id="optionTextRight">Minum Susu</div>
 					</div>
 				</div>
@@ -92,22 +93,20 @@
                     window.setTimeout(callback, 1000 / 60);
                   };
         })();
-		//var thisCanvas = document.getElementById("heatmap-canvas");
-		//var canvasWidth = thisCanvas.offsetWidth;
-		//var canvasHeight = thisCanvas.offsetHeight;
-		var timesLeft = 0;
-		var timesRight = 0;
-		var notDetected = 0;
+
+		let timesLeft = 0;
+		let timesRight = 0;
+		let notDetected = 0;
 		// create instance
-        var body = document.body;
-		var width = body.clientWidth;
-        var bodyStyle = getComputedStyle(body);
-        var hmEl = document.querySelector('.heatmap-wrapper');
+        let body = document.body;
+		let width = body.clientWidth;
+        let bodyStyle = getComputedStyle(body);
+        let hmEl = document.querySelector('.heatmap-wrapper');
 
         hmEl.style.width = bodyStyle.width;
         hmEl.style.height = bodyStyle.height;
 
-        var hm = document.querySelector('.heatmap');
+        let hm = document.querySelector('.heatmap');
 
         var heatmap = h337.create({
 		
@@ -116,36 +115,34 @@
         });
 
 
-        var trackData = false;
+        let trackData = false;
 
         setInterval(function() {
           trackData = true;
         }, 50);
 
-        var idleTimeout, idleInterval;
+        let idleTimeout, idleInterval;
 
-        var lastX, lastY;
-        var idleCount;
+        let lastX, lastY;
+        let idleCount;
 
         function startIdle() {
           idleCount = 0;
-          function idle() {
-            heatmap.addData({
-              x: lastX,
-              y: lastY
-            });
-            idleCount++;
-            if (idleCount > 10) {
-              clearInterval(idleInterval);
-            }
-          };
-          idle();
+
+			function idle() {
+				heatmap.addData({
+					x: lastX,
+					y: lastY
+				});
+				idleCount++;
+				if (idleCount > 10) {
+					clearInterval(idleInterval);
+				}
+			}
+			idle();
           idleInterval = setInterval(idle, 1000);
-        };
-
-
-
-        body.onmousemove = function(ev) {
+		}
+		body.onmousemove = function(ev) {
           if (idleTimeout) clearTimeout(idleTimeout);
           if (idleInterval) clearInterval(idleInterval);
 
