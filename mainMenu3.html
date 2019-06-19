@@ -53,18 +53,18 @@
 		<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 		<div class="pictures" style="width:100%; height:100%; z-index:1;">
 			<div class="row">
-				<div class="col-sm-3" style="background-color:aquamarine;">
-				Makan-Minum
+				<div class="col-sm-3" id="makan-minum" style="background-color:aquamarine;">
+					<a href="mainMenu3.html">Makan-Minum</a>
 				</div>
-				<div class="col-sm-3" style="background-color:LightPink;">
-				Papa-Mama
+				<div class="col-sm-3" id="papa-mama" style="background-color:LightPink;">
+					<a href="papa-mama.html">Papa-Mama</a>
 				</div>
-				<div class="col-sm-3" style="background-color:GreenYellow;">
-				Sepupu
+				<div class="col-sm-3" id="sepupu" style="background-color:GreenYellow;">
+					<a href="sepupu.html">Sepupu</a>
 				</div>
-				<div class="col-sm-3" style="background-color:BlanchedAlmond;">
-				Tidur-Mandi
-				</div>				
+				<div class="col-sm-3" id="tidur-mandi" style="background-color:BlanchedAlmond;">
+					<a href="adl2.html">Tidur-Mandi</a>
+				</div>
 			</div>
 			<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
 			<div class="option">
@@ -85,6 +85,12 @@
 					$(this).animate({opacity:1.0}, 100)
 				});
 				
+			});
+			$(document).ready(function () {
+				$("#makan-minum").click(function(){
+
+				})
+
 			});
 			window.requestAnimationFrame = (function(){
 			  return  window.requestAnimationFrame       ||
