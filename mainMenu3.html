@@ -3,21 +3,6 @@
 	<head title="Mau melakukan apa?">
 		<style type="text/css">
 		
-		.heatmap-wrapper {
-			position: absolute;
-			left: 0;
-			top: 0;
-			-webkit-transition: .3s ease all;
-			-moz-transition: .3s ease all;
-			transition: .3s ease all;
-		}
-
-		.heatmap {
-			width: 100%;
-			height: 100%;
-
-		}
-		
 		.iWantTo {
 			position:absolute;
 			top: 5%;
@@ -60,146 +45,116 @@
 			height:100%;
 		}
 		</style>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
 	</head>
 	<body>
-		<div class="heatmap-wrapper" style="width: 100%; height: 100%;">
-			<div class="heatmap" style="position: absolute;">
-
-				<canvas width="100%" height="100%" class="heatmap-canvas" style="opacity: 0; left: 0; top: 0; position: absolute;">
-				</canvas>
-				<div class="pictures" style="width:100%; height:100%; z-index:1;">
-					<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
-					<div class="option">
-						<img src="makan.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="makan">
-						<div class="optionTextLeft" id="optionTextLeft">Makan</div>
-					</div>
-					<div class="option">
-						<img src="minum.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="minum">
-						<div class="optionTextRight" id="optionTextRight">Minum</div>
-					</div>
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+		<div class="pictures" style="width:100%; height:100%; z-index:1;">
+			<div class="row">
+				<div class="col-sm-3" style="background-color:aquamarine;">
+				Makan-Minum
 				</div>
+				<div class="col-sm-3" style="background-color:LightPink;">
+				Papa-Mama
+				</div>
+				<div class="col-sm-3" style="background-color:GreenYellow;">
+				Sepupu
+				</div>
+				<div class="col-sm-3" style="background-color:BlanchedAlmond;">
+				Tidur-Mandi
+				</div>				
+			</div>
+			<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
+			<div class="option">
+				<img src="images/makan.jpeg" style="width:100%; height:100%" alt="makan">
+				<div class="optionTextLeft" id="optionTextLeft">Makan</div>
+			</div>
+			<div class="option">
+				<img src="images/minum.jpeg" style="width:100%; height:100%" alt="minum">
+				<div class="optionTextRight" id="optionTextRight">Minum</div>
 			</div>
 		</div>
-		<script src="heatmap.js"></script>
+
 		<script>
-		
-		window.requestAnimationFrame = (function(){
-          return  window.requestAnimationFrame       ||
-                  window.webkitRequestAnimationFrame ||
-                  window.mozRequestAnimationFrame    ||
-                  function( callback ){
-                    window.setTimeout(callback, 1000 / 60);
-                  };
-        })();
-		//var thisCanvas = document.getElementById("heatmap-canvas");
-		//var canvasWidth = thisCanvas.offsetWidth;
-		//var canvasHeight = thisCanvas.offsetHeight;
-		let timesLeft = 0;
-		let timesRight = 0;
-		let notDetected = 0;
-		// create instance
-        let body = document.body;
-		let width = body.clientWidth;
-        let bodyStyle = getComputedStyle(body);
-        let hmEl = document.querySelector('.heatmap-wrapper');
-
-        hmEl.style.width = bodyStyle.width;
-        hmEl.style.height = bodyStyle.height;
-
-        let hm = document.querySelector('.heatmap');
-
-        let heatmap = h337.create({
-		
-          container: hm,
-          radius: 60,
-        });
-
-
-        let trackData = false;
-
-        setInterval(function() {
-          trackData = true;
-        }, 50);
-
-        let idleTimeout, idleInterval;
-
-        let lastX, lastY;
-        let idleCount;
-
-        function startIdle() {
-          idleCount = 0;
-          function idle() {
-            heatmap.addData({
-              x: lastX,
-              y: lastY
-            });
-            idleCount++;
-            if (idleCount > 10) {
-              clearInterval(idleInterval);
-            }
-          }
-          idle();
-          idleInterval = setInterval(idle, 1000);
-        }
-
-
-
-        body.onmousemove = function(ev) {
-          if (idleTimeout) clearTimeout(idleTimeout);
-          if (idleInterval) clearInterval(idleInterval);
-
-          if (trackData) {
-            lastX = ev.pageX;
-            lastY = ev.pageY;
-            heatmap.addData({
-              x: lastX,
-              y: lastY
-            });
-            trackData = false;
-          }
-		  if(lastX < width * 0.45)
-		  {
-			timesLeft = timesLeft + 1;
-			
-		  }
-		  else if(lastX >= width * 0.55)
-		  {
-			timesRight = timesRight + 1;
-			
-		  }
-		  else
-		  {
-		    notDetected = notDetected + 1;
-		  }
-
-		  //console.log("LastY " + lastY + "\n");
-          idleTimeout = setTimeout(startIdle, 500);
-        };
-		
-		setInterval(function() 
-		{
-			if(timesLeft < 10 && timesRight < 10)
-			{
-			    window.location.href = 'adl2.html'
-			}
-			else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
-			{
-				window.location.href = 'makanapa.html'
+			$(document).ready(function () {
+				$(".col-sm-3").hover(function(){
+					$(this).animate({opacity:0.5}, 100)
+				}, function(){
+					$(this).animate({opacity:1.0}, 100)
+				});
 				
-			}
-			else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
+			});
+			window.requestAnimationFrame = (function(){
+			  return  window.requestAnimationFrame       ||
+					  window.webkitRequestAnimationFrame ||
+					  window.mozRequestAnimationFrame    ||
+					  function( callback ){
+						window.setTimeout(callback, 1000 / 60);
+					  };
+			})();
+			let timesLeft = 0;
+			let timesRight = 0;
+			let notDetected = 0;
+			// create instance
+			let body = document.body;
+			let width = body.clientWidth;
+			setInterval(function() {
+				trackData = true;
+			}, 3);
+
+			let trackData = false;
+
+			let lastX, lastY;
+
+			body.onmousemove = function(ev) {
+
+				if (trackData) {
+					lastX = ev.pageX;
+					lastY = ev.pageY;
+					trackData = false;
+				}
+				if(lastX < width * 0.45)
+				{
+					console.log("Left: " + timesLeft + "\n");
+					timesLeft = timesLeft + 1;
+
+				}
+				else if(lastX >= width * 0.55)
+				{
+					console.log("Right: " + timesRight + "\n");
+					timesRight = timesRight + 1;
+				}
+				else
+				{
+					console.log("Not Detected: " + notDetected + "\n");
+					notDetected = notDetected + 1;
+				}
+			};
+			
+			setInterval(function() 
 			{
-				window.location.href = 'minumapa.html'
-			}
-			else
-			{
-				window.location.href = 'adl2.html';
-			}
-			timesLeft = 0;
-			timesRight = 0;
-			heatmap.setData({data:[]});
-		},10*1000)
+				if(timesLeft < 10 && timesRight < 10)
+				{
+					window.location.href = 'adl2.html'
+				}
+				else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
+				{
+					window.location.href = 'makanapa.html'
+					
+				}
+				else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
+				{
+					window.location.href = 'minumapa.html'
+				}
+				else
+				{
+					window.location.href = 'adl2.html';
+				}
+				timesLeft = 0;
+				timesRight = 0;
+			},10*1000)
 		</script>
 	</body>
 </html>
