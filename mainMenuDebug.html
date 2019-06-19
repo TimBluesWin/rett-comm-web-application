@@ -71,11 +71,11 @@
 				<div class="pictures" style="width:100%; height:100%; z-index:1;">
 					<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
 					<div class="option">
-						<img src="makan.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="makan">
+						<img src="images/makan.jpeg" style="width:100%; height:100%; transform:rotate(90deg)" alt="makan">
 						<div class="optionTextLeft" id="optionTextLeft">Makan</div>
 					</div>
 					<div class="option">
-						<img src="minum.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="minum">
+						<img src="images/minum.jpeg" style="width:100%; height:100%; transform:rotate(90deg)" alt="minum">
 						<div class="optionTextRight" id="optionTextRight">Minum</div>
 					</div>
 				</div>
@@ -99,7 +99,7 @@
 		let timesLeft = 0;
 		let timesRight = 0;
 		let notDetected = 0;
-		let text = ""
+		let text = "";
 		// create instance
         let body = document.body;
 		let width = body.clientWidth;
@@ -222,7 +222,7 @@
 			{
 				mean = math.mean(xCoordinates).toFixed(2);
 				std = math.std(xCoordinates).toFixed(2);
-				text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2)
+				text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2);
 				document.getElementById("iWantTo").innerHTML = text + " Saya mau makan";
 				activity = "Makan";
 				
@@ -231,7 +231,7 @@
 			{
 				mean = math.mean(xCoordinates).toFixed(2);
 				std = math.std(xCoordinates).toFixed(2);
-				text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2)
+				text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2);
 				document.getElementById("iWantTo").innerHTML = text + " Saya mau minum";
 				activity = "Minum";
 			}
@@ -239,7 +239,7 @@
 			{
 				mean = math.mean(xCoordinates).toFixed(2);
 				std = math.std(xCoordinates).toFixed(2);
-				text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2)
+				text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2);
 				document.getElementById("iWantTo").innerHTML = text + " Belum tahu mau ngapain";
 				activity = "Belum Tahu";
 			}
