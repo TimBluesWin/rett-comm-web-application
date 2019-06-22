@@ -1,32 +1,17 @@
 <meta charset="utf-8"/>
 <html lang="id">
-	<head title="Minum Apa?">
-		<style type="text/css">
-		
-		.heatmap-wrapper {
-			position: absolute;
-			left: 0;
-			top: 0;
-			-webkit-transition: .3s ease all;
-			-moz-transition: .3s ease all;
-			transition: .3s ease all;
-		}
+<head title="Mau melakukan apa?">
+	<style type="text/css">
 
-		.heatmap {
-			width: 100%;
-			height: 100%;
-
-		}
-		
 		.iWantTo {
 			position:absolute;
-			top: 5%;
+			top: 15%;
 			left:50%;
 			transform: translate(-50%, -50%);
 			background-color: white;
 			font-size: 36px;
 		}
-		
+
 		.optionTextLeft {
 			position: absolute;
 			bottom: 5%;
@@ -35,7 +20,7 @@
 			background-color: white;
 			font-size: 36px
 		}
-		
+
 		.optionTextRight {
 			position: absolute;
 			bottom: 5%;
@@ -51,151 +36,180 @@
 		}
 
 		.pictures::after {
-		  content:"";
-		  clear: both;
-		  display: table;
+			content:"";
+			clear: both;
+			display: table;
 		}
-		
-		 html,body{
+
+		html,body{
 			height:100%;
 		}
-		</style>
-		<title></title>
-
-	</head>
-	<body>
-		<div class="heatmap-wrapper" style="width: 100%; height: 100%;">
-			<div class="heatmap" style="position: absolute;">
-
-				<canvas width="100%" height="100%" class="heatmap-canvas" style="opacity: 0; left: 0px; top: 0px; position: absolute;">
-				</canvas>
-				<div class="pictures" style="width:100%; height:100%; z-index:1;">
-					<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
-					<div class="option">
-						<img src="minumaqua.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="Minum Air Putih">
-						<div class="optionTextLeft" id="optionTextLeft">Minum Air Putih</div>
-					</div>
-					<div class="option">
-						<img src="minumsusu.jpg" style="width:100%; height:100%; transform:rotate(90deg)" alt="Minum Susu">
-						<div class="optionTextRight" id="optionTextRight">Minum Susu</div>
-					</div>
-				</div>
-			</div>
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+</head>
+<body>
+<script src="math.min.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<div class="pictures" style="width:100%; height:100%; z-index:1;">
+	<div class="row">
+		<div class="col-sm-3" id="makan-minum" style="background-color:aquamarine;">
+			<a href="mainMenu3.html">Makan-Minum</a>
 		</div>
-		<script src="heatmap.js"></script>
-		<script>
-		
-		window.requestAnimationFrame = (function(){
-          return  window.requestAnimationFrame       ||
-                  window.webkitRequestAnimationFrame ||
-                  window.mozRequestAnimationFrame    ||
-                  function( callback ){
-                    window.setTimeout(callback, 1000 / 60);
-                  };
-        })();
+		<div class="col-sm-3" id="papa-mama" style="background-color:LightPink;">
+			<a href="papa-mama.html">Papa-Mama</a>
+		</div>
+		<div class="col-sm-3" id="sepupu" style="background-color:GreenYellow;">
+			<a href="sepupu.html">Sepupu</a>
+		</div>
+		<div class="col-sm-3" id="tidur-mandi" style="background-color:BlanchedAlmond;">
+			<a href="adl2.html">Tidur-Mandi</a>
+		</div>
+	</div>
+	<div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
+	<div class="option">
+		<img src="images/minum.jpeg" style="width:100%; height:100%;" alt="minum_air_putih">
+		<div class="optionTextLeft" id="optionTextLeft">Minum air putih</div>
+	</div>
+	<div class="option">
+		<img src="images/minum_susu.jpeg" style="width:100%; height:100%;" alt="makan-snack">
+		<div class="optionTextRight" id="optionTextRight">Minum susu</div>
+	</div>
+</div>
 
-		let timesLeft = 0;
-		let timesRight = 0;
-		let notDetected = 0;
-		// create instance
-        let body = document.body;
-		let width = body.clientWidth;
-        let bodyStyle = getComputedStyle(body);
-        let hmEl = document.querySelector('.heatmap-wrapper');
+<script>
+	$(document).ready(function () {
+		$(".col-sm-3").hover(function(){
+			$(this).animate({opacity:0.5}, 100)
+		}, function(){
+			$(this).animate({opacity:1.0}, 100)
+		});
 
-        hmEl.style.width = bodyStyle.width;
-        hmEl.style.height = bodyStyle.height;
+	});
+	window.requestAnimationFrame = (function(){
+		return  window.requestAnimationFrame       ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame    ||
+				function( callback ){
+					window.setTimeout(callback, 1000 / 60);
+				};
+	})();
+	let timesLeft = 0;
+	let timesRight = 0;
+	let notDetected = 0;
+	// create instance
+	let body = document.body;
+	let width = body.clientWidth;
+	let xCoordinates = [];
+	let text = "";
+	let activity = "";
+	setInterval(function() {
+		trackData = true;
+	}, 3);
 
-        let hm = document.querySelector('.heatmap');
+	let trackData = false;
 
-        var heatmap = h337.create({
-		
-          container: hm,
-          radius: 60,
-        });
+	let lastX, lastY;
+	let mean, std;
+	function storeToDatabase(activity, meanX, std)
+	{
+		console.log("Entering function");
+		fetch("addActivity.php", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/x-www-form-urlencoded"
+			},
+			body: 'activity=' + activity + '&meanX=' + meanX + '&std=' + std
+		}).then(function(res){
+			if(res.ok)
+			{
+				console.log("Activity added");
 
-
-        let trackData = false;
-
-        setInterval(function() {
-          trackData = true;
-        }, 50);
-
-        let idleTimeout, idleInterval;
-
-        let lastX, lastY;
-        let idleCount;
-
-        function startIdle() {
-          idleCount = 0;
-
-			function idle() {
-				heatmap.addData({
-					x: lastX,
-					y: lastY
-				});
-				idleCount++;
-				if (idleCount > 10) {
-					clearInterval(idleInterval);
-				}
 			}
-			idle();
-          idleInterval = setInterval(idle, 1000);
+			else if(res.status == 401)
+			{
+				console.log("Aktivitas gagal ditambah ke basis data")
+			}
+		}, function (e) {
+			console.log(e);
+		}).catch(function (error) {
+			console.log(error);
+		})
+	}
+	body.onmousemove = function(ev) {
+
+		if (trackData) {
+			lastX = ev.pageX;
+			lastY = ev.pageY;
+			trackData = false;
 		}
-		body.onmousemove = function(ev) {
-          if (idleTimeout) clearTimeout(idleTimeout);
-          if (idleInterval) clearInterval(idleInterval);
-
-          if (trackData) {
-            lastX = ev.pageX;
-            lastY = ev.pageY;
-            heatmap.addData({
-              x: lastX,
-              y: lastY
-            });
-            trackData = false;
-          }
-		  if(lastX < width * 0.45)
-		  {
-			timesLeft = timesLeft + 1;
-			console.log("Left : " + timesLeft + "\n");
-		  }
-		  else if(lastX > width * 0.55)
-		  {
-			timesRight = timesRight + 1;
-			console.log("Right : " + timesRight + "\n");
-		  }
-		  else
-		  {
-		    notDetected = notDetected + 1;
-		  }
-          idleTimeout = setTimeout(startIdle, 500);
-        };
-		
-		setInterval(function() 
+		if(lastX != null)
 		{
-		    if(timesLeft < 10 && timesRight < 10)
-			{
-			    document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain"
-			}
-			else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
-			{
-				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextLeft").textContent;
-				
-			}
-			else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
-			{
-				document.getElementById("iWantTo").innerHTML = "Saya mau " + document.getElementById("optionTextRight").textContent;
-			}
-			else
-			{
-				document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain"
-			}
-			timesLeft = 0;
-			timesRight = 0;
-			notDetected = 0;
-			heatmap.setData({data:[]});
-		},10*1000)
-		</script>
-	</body>
+			xCoordinates.push(lastX);
+		}
+		if(lastX < width * 0.45)
+		{
+			console.log("Left: " + timesLeft + "\n");
+			timesLeft = timesLeft + 1;
+
+		}
+		else if(lastX >= width * 0.55)
+		{
+			console.log("Right: " + timesRight + "\n");
+			timesRight = timesRight + 1;
+		}
+		else
+		{
+			console.log("Not Detected: " + notDetected + "\n");
+			notDetected = notDetected + 1;
+		}
+	};
+
+	setTimeout(function()
+	{
+		if(timesLeft < 10 && timesRight < 10)
+		{
+			activity = "Belum Tahu minum apa";
+            document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
+		}
+		else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
+		{
+			mean = math.mean(xCoordinates).toFixed(2);
+			std = math.std(xCoordinates).toFixed(2);
+			text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2)
+			document.getElementById("iWantTo").innerHTML = text + " Saya mau minum air putih";
+			activity = "Minum Air Putih";
+			
+		}
+		else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
+		{
+			mean = math.mean(xCoordinates).toFixed(2);
+			std = math.std(xCoordinates).toFixed(2);
+			text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2)
+			document.getElementById("iWantTo").innerHTML = text + " Saya mau minum susu";
+			activity = "Minum Susu";
+		}
+		else
+		{
+			mean = math.mean(xCoordinates).toFixed(2);
+			std = math.std(xCoordinates).toFixed(2);
+			text += "Mean is " + math.mean(xCoordinates).toFixed(2) + "\n Std is " + math.std(xCoordinates).toFixed(2)
+			document.getElementById("iWantTo").innerHTML = text + " Belum tahu mau ngapain";
+			activity = "Belum Tahu minum apa";
+		}
+		timesLeft = 0;
+		timesRight = 0;
+		text = "";
+		if(mean!=null)
+		{
+			storeToDatabase(activity, mean, std);
+		}
+		else
+		{
+			storeToDatabase("-", null, null);
+		}
+	},10*1000)
+</script>
+</body>
 </html>
