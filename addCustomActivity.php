@@ -18,7 +18,7 @@
 
         $activity = $_POST['activityName'];
         #specify target directory
-        $target_dir = "/images";
+        $target_dir = "images/";
         #specify the path name of the file. The name of the image comes from the 'activity_image'
         #from the html; we just need the name. Then, the obtained name is concatenated with the dir.
         $target_file = $target_dir . basename($_FILES["activityImage"]["name"]);
@@ -51,5 +51,14 @@
         {
             $hashed_file = hash("sha256", time().mt_rand(10,1000)).".".$imageFileType;
             echo "The file is an image. Its hash is ".$hashed_file;
+            $target_file = $target_dir . $hashed_file;
+            if(move_uploaded_file($_FILES["activityImage"]["tmp_name"], $target_file))
+            {
+                echo "File successfully uploaded.";
+            }
+            else
+            {
+                echo "File failed to be uploaded.";
+            }
         }
 
