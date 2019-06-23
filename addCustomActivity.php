@@ -55,6 +55,13 @@
             if(move_uploaded_file($_FILES["activityImage"]["tmp_name"], $target_file))
             {
                 echo "File successfully uploaded.";
+                $statement = $conn->prepare("Insert into list_activities(activity_name, activity_file_name) values (?,?)");
+                $statement->bind_param("ss", $name, $file_name);
+
+                $name = $activity;
+                $file_name = $hashed_file;
+                $statement -> execute();
+
             }
             else
             {
