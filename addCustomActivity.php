@@ -61,7 +61,7 @@
                 $name = $activity;
                 $file_name = $hashed_file;
                 $statement -> execute();
-
+                echo "<br><a href='forCaregiver.html'>Go back</a>";
             }
             else
             {
