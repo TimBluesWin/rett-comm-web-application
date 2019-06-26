@@ -42,6 +42,22 @@
             background-color: white;
             font-size: 36px
         }
+        #chosenLeftOption {
+            position: absolute;
+            bottom: 5%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            font-size: 36px
+        }
+        #chosenRightOption {
+            position: absolute;
+            bottom: 5%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            font-size: 36px
+        }
         .option {
             float:left;
             width:50%;
@@ -85,48 +101,44 @@ include_once("config.php");
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
     <div class="option">
         <img src="images/makan.jpeg" style="width:100%; height:100%" alt="makan">
-        <div class="optionTextLeft" id="optionTextLeft">
-            <label for="chosenLeftOption">Left Activity:</label>
-            <select id="chosenLeftOption">
-                <?php
-                $sql = "SELECT activity_name, activity_file_name from list_activities";
-                $result = mysqli_query($con, $sql);
-                while($row = mysqli_fetch_array($result)) {
-                    if($row['activity_name'] == "Makan")
-                    {
-                        echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
-                    }
-                    else
-                    {
-                        echo "<option value=".$row['activity_id'].">".$row['activity_name']."</option>";
-                    }
-
+        <label for="chosenLeftOption">Left Activity:</label>
+        <select id="chosenLeftOption">
+            <?php
+            $sql = "SELECT activity_name, activity_file_name from list_activities";
+            $result = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($result)) {
+                if($row['activity_name'] == "Makan")
+                {
+                    echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
                 }
-                ?>
-            </select>
-        </div>
+                else
+                {
+                    echo "<option value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                }
+
+            }
+            ?>
+        </select>
     </div>
     <div class="option">
         <img src="images/minum.jpeg" style="width:100%; height:100%" alt="minum">
-        <div class="optionTextRight" id="optionTextRight">
-            <label for="chosenRightOption">Right option:</label>
-            <select id="chosenRightOption">
-                <?php
-                $sql = "SELECT activity_name, activity_file_name from list_activities";
-                $result = mysqli_query($con, $sql);
-                while($row = mysqli_fetch_array($result)) {
-                    if($row['activity_name'] == "Minum")
-                    {
-                        echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
-                    }
-                    else
-                    {
-                        echo "<option value=".$row['activity_id'].">".$row['activity_name']."</option>";
-                    }
+        <label for="chosenRightOption">Right option:</label>
+        <select id="chosenRightOption">
+            <?php
+            $sql = "SELECT activity_name, activity_file_name from list_activities";
+            $result = mysqli_query($con, $sql);
+            while($row = mysqli_fetch_array($result)) {
+                if($row['activity_name'] == "Minum")
+                {
+                    echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
                 }
-                ?>
-            </select>
-        </div>
+                else
+                {
+                    echo "<option value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                }
+            }
+            ?>
+        </select>
     </div>
 </div>
 
