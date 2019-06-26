@@ -15,7 +15,7 @@
         #chosenLeftOption {
             position: absolute;
             bottom: 5%;
-            left: 25%;
+            left: 15%;
             transform: translate(-50%, -50%);
             background-color: white;
             font-size: 36px
@@ -23,11 +23,27 @@
         #chosenRightOption {
             position: absolute;
             bottom: 5%;
-            left: 75%;
+            left: 85%;
             transform: translate(-50%, -50%);
             background-color: white;
             font-size: 36px
         }
+        #timeRemaining {
+            position: absolute;
+            left:35%;
+            bottom: 5%;
+            align-content: center;
+            background-color: white;
+        }
+
+        .timers{
+            left:35%;
+            position: absolute;
+            bottom: 15%;
+            align-content: center;
+            background-color: white;
+        }
+
         .option {
             float:left;
             width:50%;
@@ -69,6 +85,14 @@ include_once("config.php");
         </div>
     </div>
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
+    <div class="timers">
+        Durasi melihat:
+        <input type="number" label="Time Left" id="time" value="10">
+        <input type="button" value="Change time" onclick="changeSomething()"> <br>
+        Durasi sebelum refresh:
+        <input type="number" label="Delay to refresh" id="refresh" value="10">
+        <input type="button" value="Change time" onclick="changeSomething()">
+    </div>
     <div class="option">
         <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
         <label for="chosenLeftOption">Left Activity:</label>
@@ -90,6 +114,7 @@ include_once("config.php");
             ?>
         </select>
     </div>
+    <div id="timeRemaining">Time:10</div>
     <div class="option">
         <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
         <label for="chosenRightOption">Right option:</label>
@@ -153,6 +178,49 @@ include_once("config.php");
 
         })
     });
+
+    $("#chosenLeftOption").change(function(){
+        let activity_id_left = $('#chosenLeftOption').val();
+        $.ajax({
+            type:"POST",
+            url:"getActivity.php",
+            dataType:'json',
+            data:{activity_id:activity_id_left},
+            success:function(data) {
+                if(data != "fail")
+                {
+                    $('#optionLeftImage').attr('src', "images/" + data.activity_file_name);
+                }
+                else
+                {
+                    $('#optionLeftImage').attr('src', "images/questionMark.jpg");
+                }
+            }
+
+        })
+    });
+
+    $("#chosenRightOption").change(function(){
+        let activity_id_left = $('#chosenRightOption').val();
+        $.ajax({
+            type:"POST",
+            url:"getActivity.php",
+            dataType:'json',
+            data:{activity_id:activity_id_left},
+            success:function(data) {
+                if(data != "fail")
+                {
+                    $('#optionRightImage').attr('src', "images/" + data.activity_file_name);
+                }
+                else
+                {
+                    $('#optionRightImage').attr('src', "images/questionMark.jpg");
+                }
+            }
+
+        })
+    });
+
     $(document).ready(function () {
         $(".col-sm-3").hover(function(){
             $(this).animate({opacity:0.5}, 100)
