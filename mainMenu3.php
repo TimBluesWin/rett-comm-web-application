@@ -128,6 +128,10 @@ include_once("config.php");
 </div>
 
 <script>
+    function getActivityImage(activity_id)
+    {
+
+    }
     $(document).ready(function () {
         $(".col-sm-3").hover(function(){
             $(this).animate({opacity:0.5}, 100)
@@ -142,6 +146,9 @@ include_once("config.php");
         })
 
     });
+
+
+
     window.requestAnimationFrame = (function(){
         return  window.requestAnimationFrame       ||
             window.webkitRequestAnimationFrame ||
