@@ -114,7 +114,7 @@ include_once("config.php");
             ?>
         </select>
     </div>
-    <div id="timeRemaining">Time:10</div>
+    <div id="timeRemaining">Time to look: 10</div>
     <div class="option">
         <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
         <label for="chosenRightOption">Right option:</label>
@@ -229,6 +229,63 @@ include_once("config.php");
         });
 
     });
+
+    function timeToReload(interval, timeRefresh)
+    {
+        timeRefresh -= 1;
+        jQuery("#timeRemaining").html("Time to refresh: " + timeRefresh);
+        if(timeRefresh <= 0)
+        {
+            clearInterval(interval);
+            location.reload();
+        }
+        return timeRefresh;
+    }
+    function countdownRemaining(interval, timeRemaining, timeRefresh)
+    {
+        timeRemaining -= 1;
+        jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
+        if(timeRemaining <= 0)
+        {
+            //jQuery("#timeRemaining").html("Countdown ended.");
+            clearInterval(interval);
+            refreshInterval = setInterval(function() {
+                timeRefresh = timeToReload(interval, timeRefresh);
+            }, 1000)
+
+        }
+        return timeRemaining;
+    }
+    let timeRemaining = 10;
+    let timeRefresh = 10;
+    let refreshInterval = null;
+    let countdownInterval = setInterval(function () {
+        timeRemaining = countdownRemaining(countdownInterval, timeRemaining, timeRefresh);
+    }, 1000)
+
+
+    function changeSomething()
+    {
+        clearInterval(countdownInterval);
+        clearInterval(refreshInterval);
+        countdownInterval = null;
+        refreshInterval = null;
+        timeRemaining = document.getElementById("time").value;
+        if(timeRemaining == null || timeRemaining <= 0)
+        {
+            timeRemaining = 10;
+        }
+        timeRefresh = document.getElementById("refresh").value;
+        if(timeRefresh == null || timeRefresh <= 0)
+        {
+            timeRefresh = 10;
+        }
+        countdownInterval = setInterval(function () {
+            timeRemaining = countdownRemaining(countdownInterval, timeRemaining, timeRefresh);
+        }, 1000)
+
+        document.getElementById("time").innerHTML(timeRemaining);
+    }
 
     window.requestAnimationFrame = (function(){
         return  window.requestAnimationFrame       ||
