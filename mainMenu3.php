@@ -145,8 +145,7 @@ include_once("config.php");
 <script>
     $(document).ready(function(){
         let activity_id_left = $('#chosenLeftOption').val();
-        //let activity_id = 0;
-        console.log("Activity_id for left is " + activity_id_left);
+        //console.log("Activity_id for left is " + activity_id_left);
         $.ajax({
             type:"POST",
             url:"getActivity.php",
@@ -155,13 +154,36 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    console.log("Result is " + data.activity_file_name);
+                    //console.log("Result is " + data.activity_file_name);
                     $('#optionLeftImage').attr('src', "images/" + data.activity_file_name);
                 }
                 else
                 {
-                    console.log("error");
+                    //console.log("error");
                     $('#optionLeftImage').attr('src', "images/questionMark.jpg");
+                }
+            }
+
+        })
+    })
+    $(document).ready(function(){
+        let activity_id_right = $('#chosenRightOption').val();
+        //console.log("Activity_id for right is " + activity_id_right);
+        $.ajax({
+            type:"POST",
+            url:"getActivity.php",
+            dataType:'json',
+            data:{activity_id:activity_id_right},
+            success:function(data) {
+                if(data != "fail")
+                {
+                    //console.log("Result is " + data.activity_file_name);
+                    $('#optionRightImage').attr('src', "images/" + data.activity_file_name);
+                }
+                else
+                {
+                    //console.log("error");
+                    $('#optionRightImage').attr('src', "images/questionMark.jpg");
                 }
             }
 
