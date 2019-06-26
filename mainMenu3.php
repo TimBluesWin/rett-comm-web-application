@@ -12,36 +12,6 @@
             background-color: white;
             font-size: 36px;
         }
-        /*
-        .selectOptionLeft {
-            position:absolute;
-            top: 25%;
-            left: 25%;
-        }
-
-        .selectOptionRight {
-            position:absolute;
-            top: 25%;
-            left: 75%;
-        }*/
-
-        .optionTextLeft {
-            position: absolute;
-            bottom: 5%;
-            left: 25%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            font-size: 36px
-        }
-
-        .optionTextRight {
-            position: absolute;
-            bottom: 5%;
-            left: 75%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            font-size: 36px
-        }
         #chosenLeftOption {
             position: absolute;
             bottom: 5%;
@@ -145,7 +115,6 @@ include_once("config.php");
 <script>
     $(document).ready(function(){
         let activity_id_left = $('#chosenLeftOption').val();
-        //console.log("Activity_id for left is " + activity_id_left);
         $.ajax({
             type:"POST",
             url:"getActivity.php",
@@ -154,21 +123,18 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    //console.log("Result is " + data.activity_file_name);
                     $('#optionLeftImage').attr('src', "images/" + data.activity_file_name);
                 }
                 else
                 {
-                    //console.log("error");
                     $('#optionLeftImage').attr('src', "images/questionMark.jpg");
                 }
             }
 
         })
-    })
+    });
     $(document).ready(function(){
         let activity_id_right = $('#chosenRightOption').val();
-        //console.log("Activity_id for right is " + activity_id_right);
         $.ajax({
             type:"POST",
             url:"getActivity.php",
@@ -177,18 +143,16 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    //console.log("Result is " + data.activity_file_name);
                     $('#optionRightImage').attr('src', "images/" + data.activity_file_name);
                 }
                 else
                 {
-                    //console.log("error");
                     $('#optionRightImage').attr('src', "images/questionMark.jpg");
                 }
             }
 
         })
-    })
+    });
     $(document).ready(function () {
         $(".col-sm-3").hover(function(){
             $(this).animate({opacity:0.5}, 100)
