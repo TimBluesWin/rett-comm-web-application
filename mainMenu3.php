@@ -1,6 +1,7 @@
 <meta charset="utf-8"/>
 <html lang="id">
 <head title="Mau melakukan apa?">
+    <title>Mau melakukan apa?</title>
     <style type="text/css">
 
         .iWantTo {
@@ -85,6 +86,7 @@ include_once("config.php");
     <div class="option">
         <img src="images/makan.jpeg" style="width:100%; height:100%" alt="makan">
         <div class="optionTextLeft" id="optionTextLeft">
+            <label for="chosenLeftOption">Left Activity:</label>
             <select id="chosenLeftOption">
                 <?php
                 $sql = "SELECT activity_name, activity_file_name from list_activities";
@@ -107,12 +109,13 @@ include_once("config.php");
     <div class="option">
         <img src="images/minum.jpeg" style="width:100%; height:100%" alt="minum">
         <div class="optionTextRight" id="optionTextRight">
+            <label for="chosenRightOption">Right option:</label>
             <select id="chosenRightOption">
                 <?php
                 $sql = "SELECT activity_name, activity_file_name from list_activities";
                 $result = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_array($result)) {
-                    if($row['activity_name'] == "Makan")
+                    if($row['activity_name'] == "Minum")
                     {
                         echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
                     }
@@ -140,14 +143,6 @@ include_once("config.php");
         });
 
     });
-    $(document).ready(function () {
-        $("#makan-minum").click(function(){
-
-        })
-
-    });
-
-
 
     window.requestAnimationFrame = (function(){
         return  window.requestAnimationFrame       ||
