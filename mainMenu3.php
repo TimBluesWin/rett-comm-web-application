@@ -285,6 +285,9 @@ include_once("config.php");
 
     function changeSomething()
     {
+        timesLeft = 0;
+        timesRight = 0;
+        notDetected = 0;
         clearInterval(countdownInterval);
         clearInterval(refreshInterval);
         countdownInterval = null;
@@ -304,6 +307,7 @@ include_once("config.php");
         }, 1000)
 
         document.getElementById("time").innerHTML(timeRemaining);
+
     }
 
     window.requestAnimationFrame = (function(){
