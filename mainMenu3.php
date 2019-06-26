@@ -100,11 +100,11 @@ include_once("config.php");
     </div>
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
     <div class="option">
-        <img src="images/makan.jpeg" style="width:100%; height:100%" alt="makan">
+        <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
         <label for="chosenLeftOption">Left Activity:</label>
         <select id="chosenLeftOption">
             <?php
-            $sql = "SELECT activity_name, activity_file_name from list_activities";
+            $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
                 if($row['activity_name'] == "Makan")
@@ -121,11 +121,11 @@ include_once("config.php");
         </select>
     </div>
     <div class="option">
-        <img src="images/minum.jpeg" style="width:100%; height:100%" alt="minum">
+        <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
         <label for="chosenRightOption">Right option:</label>
         <select id="chosenRightOption">
             <?php
-            $sql = "SELECT activity_name, activity_file_name from list_activities";
+            $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
                 if($row['activity_name'] == "Minum")
@@ -143,10 +143,30 @@ include_once("config.php");
 </div>
 
 <script>
-    function getActivityImage(activity_id)
-    {
+    $(document).ready(function(){
+        let activity_id_left = $('#chosenLeftOption').val();
+        //let activity_id = 0;
+        console.log("Activity_id for left is " + activity_id_left);
+        $.ajax({
+            type:"POST",
+            url:"getActivity.php",
+            dataType:'json',
+            data:{activity_id:activity_id_left},
+            success:function(data) {
+                if(data != "fail")
+                {
+                    console.log("Result is " + data.activity_file_name);
+                    $('#optionLeftImage').attr('src', "images/" + data.activity_file_name);
+                }
+                else
+                {
+                    console.log("error");
+                    $('#optionLeftImage').attr('src', "images/questionMark.jpg");
+                }
+            }
 
-    }
+        })
+    })
     $(document).ready(function () {
         $(".col-sm-3").hover(function(){
             $(this).animate({opacity:0.5}, 100)
@@ -187,23 +207,23 @@ include_once("config.php");
         }
         if(lastX < width * 0.45)
         {
-            console.log("Left: " + timesLeft + "\n");
+            //console.log("Left: " + timesLeft + "\n");
             timesLeft = timesLeft + 1;
 
         }
         else if(lastX >= width * 0.55)
         {
-            console.log("Right: " + timesRight + "\n");
+            //console.log("Right: " + timesRight + "\n");
             timesRight = timesRight + 1;
         }
         else
         {
-            console.log("Not Detected: " + notDetected + "\n");
+            //console.log("Not Detected: " + notDetected + "\n");
             notDetected = notDetected + 1;
         }
     };
 
-    setInterval(function()
+    /**setInterval(function()
     {
         if(timesLeft < 10 && timesRight < 10)
         {
@@ -224,6 +244,6 @@ include_once("config.php");
         }
         timesLeft = 0;
         timesRight = 0;
-    },10*1000)
+    },10*1000)*/
 </script>
 </body>
