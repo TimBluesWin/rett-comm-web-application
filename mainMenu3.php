@@ -249,6 +249,25 @@ include_once("config.php");
         {
             //jQuery("#timeRemaining").html("Countdown ended.");
             clearInterval(interval);
+            if(timesLeft < 10 && timesRight < 10)
+            {
+                window.location.href = 'adl2.html'
+            }
+            else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
+            {
+                window.location.href = 'makanapa.html'
+
+            }
+            else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
+            {
+                window.location.href = 'minumapa.html'
+            }
+            else
+            {
+                window.location.href = 'adl2.html';
+            }
+            timesLeft = 0;
+            timesRight = 0;
             refreshInterval = setInterval(function() {
                 timeRefresh = timeToReload(interval, timeRefresh);
             }, 1000)
