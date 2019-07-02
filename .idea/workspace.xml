@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/makanApa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papa-mama.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sepupu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tidur-mandi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainMenu3.php" beforeDir="false" afterPath="$PROJECT_DIR$/mainMenu3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addCustomActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/addCustomActivity.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,29 +25,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainMenu3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+            <state>
+              <caret selection-end-line="400" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/makanapa.html">
+        <entry file="file://$PROJECT_DIR$/makanApa.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/papa-mama.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2958">
-              <caret line="174" column="84" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="84" />
+            <state relative-caret-position="358">
+              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addCustomActivity.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sepupu.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tidur-mandi.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addCustomActivity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+            <state relative-caret-position="335">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -98,6 +126,7 @@
       <find>activity_id_right</find>
       <find>forCare</find>
       <find>forCaregiver</find>
+      <find>success</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,9 +152,10 @@
         <option value="$PROJECT_DIR$/addCustomActivity.html" />
         <option value="$PROJECT_DIR$/customizeActivity.html" />
         <option value="$PROJECT_DIR$/customizeActivity.php" />
-        <option value="$PROJECT_DIR$/addCustomActivity.php" />
         <option value="$PROJECT_DIR$/getActivity.php" />
         <option value="$PROJECT_DIR$/mainMenu3.php" />
+        <option value="$PROJECT_DIR$/papa-mama.php" />
+        <option value="$PROJECT_DIR$/addCustomActivity.php" />
       </list>
     </option>
   </component>
@@ -210,7 +240,7 @@
       <workItem from="1561559602699" duration="4644000" />
       <workItem from="1561618437184" duration="782000" />
       <workItem from="1562044627133" duration="250000" />
-      <workItem from="1562045988963" duration="924000" />
+      <workItem from="1562045988963" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="Tidying up the code slightly">
       <created>1558502248885</created>
@@ -436,11 +466,32 @@
       <option name="project" value="LOCAL" />
       <updated>1561567767139</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Adds &quot;Add activity&quot; button to the website.&#10;&#10;This commit aims to connect the addCustomActivity.html to the site. We just need to add button with a href to the addCustomActivity.html.">
+      <created>1562054803133</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1562054803133</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Change the hyperlink of the buttons on the top of the screen.">
+      <created>1562055229130</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1562055229130</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Remove all manually-added images">
+      <created>1562055250682</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1562055250682</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62640000" />
+    <option name="totallyTimeSpent" value="64051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -494,9 +545,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make the div inside the bootstrap clickable" />
-    <MESSAGE value="Tidying up code" />
-    <MESSAGE value="Add empty files" />
     <MESSAGE value="Edit files" />
     <MESSAGE value="Add pictures.&#10;&#10;This commit aims to add additional pictures which will be used to show for the patient." />
     <MESSAGE value="Change the method after 10 seconds to message.&#10;&#10;The previous implementation of the webpage accidentally redirects the page to adl2.html if there's not enough cursor movement. This commit fixes that such that it will show the message &quot;Belum tahu mau ngapain&quot;." />
@@ -519,7 +567,10 @@
     <MESSAGE value="Make the buttons functional.&#10;&#10;This commit makes the timer functional, as well as the countdown. However, this still does not include the change of page after the time has passed." />
     <MESSAGE value="Make the website goes to the appropriate page, depending on the cursor movement." />
     <MESSAGE value="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed." />
+    <MESSAGE value="Adds &quot;Add activity&quot; button to the website.&#10;&#10;This commit aims to connect the addCustomActivity.html to the site. We just need to add button with a href to the addCustomActivity.html." />
+    <MESSAGE value="Change the hyperlink of the buttons on the top of the screen." />
+    <MESSAGE value="Remove all manually-added images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove all manually-added images" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainMenu.html" />
@@ -604,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addCustomActivity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -618,24 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/makanapa.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2958">
           <caret line="174" column="84" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addCustomActivity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -660,6 +690,43 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makanApa.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sepupu.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidur-mandi.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="400" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa-mama.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addCustomActivity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addCustomActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
         </state>
       </provider>
     </entry>

@@ -13,7 +13,7 @@
         }
         else
         {
-            echo "success";
+            //echo "success";
         }
 
         $activity = $_POST['activityName'];
@@ -29,7 +29,7 @@
             $check = getimagesize($_FILES["activityImage"]["tmp_name"]);
             if($check !== false)
             {
-                echo "File is an image - " . $check["mime"] . ".";
+                //echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             }
             else
@@ -50,18 +50,20 @@
         else
         {
             $hashed_file = hash("sha256", time().mt_rand(10,1000)).".".$imageFileType;
-            echo "The file is an image. Its hash is ".$hashed_file;
+            //echo "The file is an image. Its hash is ".$hashed_file;
             $target_file = $target_dir . $hashed_file;
             if(move_uploaded_file($_FILES["activityImage"]["tmp_name"], $target_file))
             {
-                echo "File successfully uploaded.";
+                echo "File successfully uploaded.<br>";
                 $statement = $conn->prepare("Insert into list_activities(activity_name, activity_file_name) values (?,?)");
                 $statement->bind_param("ss", $name, $file_name);
 
                 $name = $activity;
                 $file_name = $hashed_file;
                 $statement -> execute();
-                echo "<br><a href='forCaregiver.html'>Go back</a>";
+                echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
+                echo "<a href=mainMenu3.php>Go back to main menu</a>";
+
             }
             else
             {
