@@ -106,7 +106,7 @@ include_once("config.php");
             $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
-                if($row['activity_name'] == "Makan")
+                if($row['activity_name'] == "Papa")
                 {
                     echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
                 }
@@ -128,7 +128,7 @@ include_once("config.php");
             $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
-                if($row['activity_name'] == "Minum")
+                if($row['activity_name'] == "Kakak")
                 {
                     echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
                 }
@@ -265,18 +265,17 @@ include_once("config.php");
             }
             else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
             {
-                //cbo = document.getElementById("chosenLeftOption");
-                //let leftActivity = cbo.options[cbo.selectedIndex].text;
-                //document.getElementById("iWantTo").innerHTML = "Saya mau " + leftActivity;
-                window.location.href = 'makanApa.php'
+                cbo = document.getElementById("chosenLeftOption");
+                let leftActivity = cbo.options[cbo.selectedIndex].text;
+                document.getElementById("iWantTo").innerHTML = "Saya mau dilayani oleh " + leftActivity;
 
             }
             else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
             {
-                //cbo = document.getElementById("chosenRightOption");
-                //let rightActivity = cbo.options[cbo.selectedIndex].text;
-                //document.getElementById("iWantTo").innerHTML = "Saya mau " + rightActivity;
-                window.location.href = 'minumApa.php'
+                cbo = document.getElementById("chosenRightOption");
+                let rightActivity = cbo.options[cbo.selectedIndex].text;
+                document.getElementById("iWantTo").innerHTML = "Saya mau dilayani oleh " + rightActivity;
+                //window.location.href = 'minumapa.html'
             }
             else
             {
@@ -293,7 +292,7 @@ include_once("config.php");
         return timeRemaining;
     }
     let timeRemaining = $('#time').val();
-	document.getElementById("time").innerHTML = "Time remaining: " + timeRemaining;
+    document.getElementById("time").innerHTML = "Time remaining: " + timeRemaining;
     let timeRefresh = $('#refresh').val();
     let refreshInterval = null;
     let countdownInterval = setInterval(function () {
@@ -311,7 +310,7 @@ include_once("config.php");
         countdownInterval = null;
         refreshInterval = null;
         timeRemaining = document.getElementById("time").value;
-		document.getElementById("time").innerHTML= "Time remaining: " + timeRemaining;
+        document.getElementById("time").innerHTML= "Time remaining: " + timeRemaining;
         if(timeRemaining == null || timeRemaining <= 0)
         {
             timeRemaining = 10;
@@ -325,7 +324,7 @@ include_once("config.php");
             timeRemaining = countdownRemaining(countdownInterval, timeRemaining, timeRefresh);
         }, 1000);
 
-        
+
 
     }
 
@@ -377,7 +376,7 @@ include_once("config.php");
     };
 
     /**setInterval(function()
-    {
+     {
         if(timesLeft < 10 && timesRight < 10)
         {
             window.location.href = 'adl2.html'
@@ -400,3 +399,4 @@ include_once("config.php");
     },10*1000)*/
 </script>
 </body>
+
