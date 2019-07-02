@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="Do the same for the right option.">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customizeActivity.html" beforeDir="false" afterPath="$PROJECT_DIR$/customizeActivity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forCaregiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/forCaregiver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainMenu3.php" beforeDir="false" afterPath="$PROJECT_DIR$/mainMenu3.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +24,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainMenu3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
+            <state relative-caret-position="228">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/makanapa.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2958">
+              <caret line="174" column="84" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -92,6 +96,8 @@
       <find>dat</find>
       <find>activity_id</find>
       <find>activity_id_right</find>
+      <find>forCare</find>
+      <find>forCaregiver</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,7 +144,20 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="finalProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -188,7 +207,10 @@
       <workItem from="1561409090752" duration="190000" />
       <workItem from="1561469481567" duration="18950000" />
       <workItem from="1561551170672" duration="4594000" />
-      <workItem from="1561559602699" duration="2869000" />
+      <workItem from="1561559602699" duration="4644000" />
+      <workItem from="1561618437184" duration="782000" />
+      <workItem from="1562044627133" duration="250000" />
+      <workItem from="1562045988963" duration="924000" />
     </task>
     <task id="LOCAL-00001" summary="Tidying up the code slightly">
       <created>1558502248885</created>
@@ -400,17 +422,31 @@
       <option name="project" value="LOCAL" />
       <updated>1561567061114</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Make the website goes to the appropriate page, depending on the cursor movement.">
+      <created>1561567478937</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1561567478937</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed.">
+      <created>1561567767139</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1561567767139</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58909000" />
+    <option name="totallyTimeSpent" value="62640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.37670198" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39485627" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -458,8 +494,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Final Version Program" />
-    <MESSAGE value="Add missing files" />
     <MESSAGE value="Make the div inside the bootstrap clickable" />
     <MESSAGE value="Tidying up code" />
     <MESSAGE value="Add empty files" />
@@ -483,7 +517,9 @@
     <MESSAGE value="Remove unneccessary coding." />
     <MESSAGE value="Add options to change the time to look over the options and the refresh.&#10;&#10;This commit adds the options for the caregiver to change the time for the patient to look to one options, as well as time for the website to refresh itself, as requested by Doctor Nita. This allows the caregiver to adapt to different focus times for each patient. However, the time is still not yet functional." />
     <MESSAGE value="Make the buttons functional.&#10;&#10;This commit makes the timer functional, as well as the countdown. However, this still does not include the change of page after the time has passed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Make the buttons functional.&#10;&#10;This commit makes the timer functional, as well as the countdown. However, this still does not include the change of page after the time has passed." />
+    <MESSAGE value="Make the website goes to the appropriate page, depending on the cursor movement." />
+    <MESSAGE value="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainMenu.html" />
@@ -582,17 +618,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/makanapa.html">
+    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1306">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="228">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
+    <entry file="file://$PROJECT_DIR$/makanapa.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
+        <state relative-caret-position="2958">
+          <caret line="174" column="84" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="84" />
         </state>
       </provider>
     </entry>

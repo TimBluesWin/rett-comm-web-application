@@ -59,6 +59,12 @@
         html,body{
             height:100%;
         }
+
+        .forCaregiver{
+            right:5%;
+            top:10%;
+            position:absolute;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
@@ -95,7 +101,6 @@ include_once("config.php");
     </div>
     <div class="option">
         <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
-        <label for="chosenLeftOption">Left Activity:</label>
         <select id="chosenLeftOption">
             <?php
             $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
@@ -113,11 +118,11 @@ include_once("config.php");
             }
             ?>
         </select>
+        <a href="addCustomActivity.html"><button class="forCaregiver" value="Add Activity">Add Activity</button></a>
     </div>
     <div id="timeRemaining">Time to look: 10</div>
     <div class="option">
         <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
-        <label for="chosenRightOption">Right option:</label>
         <select id="chosenRightOption">
             <?php
             $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
@@ -135,6 +140,7 @@ include_once("config.php");
             ?>
         </select>
     </div>
+
 </div>
 
 <script>
@@ -195,6 +201,7 @@ include_once("config.php");
                 {
                     $('#optionLeftImage').attr('src', "images/questionMark.jpg");
                 }
+                changeSomething();
             }
 
         })
@@ -216,7 +223,9 @@ include_once("config.php");
                 {
                     $('#optionRightImage').attr('src', "images/questionMark.jpg");
                 }
+                changeSomething();
             }
+
 
         })
     });
@@ -247,24 +256,31 @@ include_once("config.php");
         jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
         if(timeRemaining <= 0)
         {
+            let cbo = null;
             //jQuery("#timeRemaining").html("Countdown ended.");
             clearInterval(interval);
             if(timesLeft < 10 && timesRight < 10)
             {
-                window.location.href = 'adl2.html'
+                document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
             }
             else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
             {
-                window.location.href = 'makanapa.html'
+                cbo = document.getElementById("chosenLeftOption");
+                let leftActivity = cbo.options[cbo.selectedIndex].text;
+                document.getElementById("iWantTo").innerHTML = "Saya mau " + leftActivity;
 
             }
             else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
             {
-                window.location.href = 'minumapa.html'
+                cbo = document.getElementById("chosenRightOption");
+                let rightActivity = cbo.options[cbo.selectedIndex].text;
+                document.getElementById("iWantTo").innerHTML = "Saya mau " + rightActivity;
+                //window.location.href = 'minumapa.html'
             }
             else
             {
-                window.location.href = 'adl2.html';
+                document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
+                //window.location.href = 'adl2.html';
             }
             timesLeft = 0;
             timesRight = 0;
@@ -275,12 +291,13 @@ include_once("config.php");
         }
         return timeRemaining;
     }
-    let timeRemaining = 10;
-    let timeRefresh = 10;
+    let timeRemaining = $('#time').val();
+	document.getElementById("time").innerHTML = "Time remaining: " + timeRemaining;
+    let timeRefresh = $('#refresh').val();
     let refreshInterval = null;
     let countdownInterval = setInterval(function () {
         timeRemaining = countdownRemaining(countdownInterval, timeRemaining, timeRefresh);
-    }, 1000)
+    }, 1000);
 
 
     function changeSomething()
@@ -293,6 +310,7 @@ include_once("config.php");
         countdownInterval = null;
         refreshInterval = null;
         timeRemaining = document.getElementById("time").value;
+		document.getElementById("time").innerHTML= "Time remaining: " + timeRemaining;
         if(timeRemaining == null || timeRemaining <= 0)
         {
             timeRemaining = 10;
@@ -304,9 +322,9 @@ include_once("config.php");
         }
         countdownInterval = setInterval(function () {
             timeRemaining = countdownRemaining(countdownInterval, timeRemaining, timeRefresh);
-        }, 1000)
+        }, 1000);
 
-        document.getElementById("time").innerHTML(timeRemaining);
+        
 
     }
 
