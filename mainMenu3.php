@@ -78,16 +78,16 @@ include_once("config.php");
 <div class="pictures" style="width:100%; height:100%; z-index:1;">
     <div class="row">
         <div class="col-sm-3" id="makan-minum" style="background-color:aquamarine;">
-            <a href="mainMenu3.html">Makan-Minum</a>
+            <a href="mainMenu3.php">Makan-Minum</a>
         </div>
         <div class="col-sm-3" id="papa-mama" style="background-color:LightPink;">
-            <a href="papa-mama.html">Papa-Mama</a>
+            <a href="papa-mama.php">Papa-Mama</a>
         </div>
         <div class="col-sm-3" id="sepupu" style="background-color:GreenYellow;">
-            <a href="sepupu.html">Sepupu</a>
+            <a href="sepupu.php">Sepupu</a>
         </div>
         <div class="col-sm-3" id="tidur-mandi" style="background-color:BlanchedAlmond;">
-            <a href="adl2.html">Tidur-Mandi</a>
+            <a href="tidur-mandi.php">Tidur-Mandi</a>
         </div>
     </div>
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
