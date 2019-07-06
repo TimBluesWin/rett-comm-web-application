@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/forCaregiver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/responsiveVoice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forCaregiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/forCaregiver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainMenu3.php" beforeDir="false" afterPath="$PROJECT_DIR$/mainMenu3.php" afterDir="false" />
@@ -30,11 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainMenu3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+            <state relative-caret-position="274">
+              <caret line="289" column="64" selection-start-line="289" selection-start-column="64" selection-end-line="289" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/responsiveVoice.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="116" column="275" selection-start-line="116" selection-start-column="270" selection-end-line="116" selection-end-column="275" />
             </state>
           </provider>
         </entry>
@@ -96,6 +106,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -111,8 +122,8 @@
       <find>forCare</find>
       <find>success</find>
       <find>forCaregiver</find>
-      <find>speak</find>
       <find>SpeechSynthesis</find>
+      <find>speak</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,6 +159,7 @@
         <option value="$PROJECT_DIR$/makanapa.html" />
         <option value="$PROJECT_DIR$/papa-kakak.html" />
         <option value="$PROJECT_DIR$/minumApa.php" />
+        <option value="$PROJECT_DIR$/responsiveVoice.js" />
         <option value="$PROJECT_DIR$/mainMenu3.php" />
       </list>
     </option>
@@ -240,7 +252,7 @@
       <workItem from="1562044627133" duration="250000" />
       <workItem from="1562045988963" duration="17385000" />
       <workItem from="1562314008486" duration="599000" />
-      <workItem from="1562401685760" duration="812000" />
+      <workItem from="1562401685760" duration="2094000" />
     </task>
     <task id="LOCAL-00001" summary="Tidying up the code slightly">
       <created>1558502248885</created>
@@ -501,17 +513,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562061486729</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Add numerous features to the web applications">
+      <created>1562403243660</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1562403243660</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80512000" />
+    <option name="totallyTimeSpent" value="81794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.8615734" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23903178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -559,7 +578,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change the method after 10 seconds to message.&#10;&#10;The previous implementation of the webpage accidentally redirects the page to adl2.html if there's not enough cursor movement. This commit fixes that such that it will show the message &quot;Belum tahu mau ngapain&quot;." />
     <MESSAGE value="Add contents to sepupu.html&#10;&#10;This commit aims" />
     <MESSAGE value="Add debug output to the committed files, and store them to database." />
     <MESSAGE value="Add menu for caregiver.&#10;&#10;This commit aims to add the navigation menu for caregiver, as requested by Doctor Nita. Currently the requests are to add custom activities, as well as the combinations. The addCustomActivity.html and customizeActivity.html files are currently still barebones." />
@@ -584,7 +602,8 @@
     <MESSAGE value="Remove all manually-added images" />
     <MESSAGE value="Edit the output of addCustomActivity.php&#10;&#10;We remove the debugging output for the addCustomActivity.php, and we also add the option to go back to the main menu after adding activity." />
     <MESSAGE value="Add all the activity pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add all the activity pages." />
+    <MESSAGE value="Add numerous features to the web applications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add numerous features to the web applications" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainMenu.html" />
@@ -739,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/minumApa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4845">
@@ -784,6 +796,20 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="289" column="64" selection-start-line="289" selection-start-column="64" selection-end-line="289" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/responsiveVoice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="116" column="275" selection-start-line="116" selection-start-column="270" selection-end-line="116" selection-end-column="275" />
         </state>
       </provider>
     </entry>

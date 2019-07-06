@@ -43,7 +43,6 @@
             align-content: center;
             background-color: white;
         }
-
         .option {
             float:left;
             width:50%;
@@ -71,6 +70,7 @@
 </head>
 <body>
 <script src="jquery-3.4.1.min.js"></script>
+<script src="responsiveVoice.js"></script>
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 <?php
 include_once("config.php");
@@ -257,13 +257,8 @@ include_once("config.php");
         jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
         if(timeRemaining <= 0)
         {
-            const msg = new SpeechSynthesisUtterance();
-            msg.volume = 1;
-            msg.rate = 1;
-            msg.pitch = 1;
-            let text = "";
-            msg.voiceURI = "Microsoft Andika - Indonesian (Indonesia)";
-            msg.lang = "id-ID";
+            let voice = "Indonesian Female";
+            let volume = 1;
             let cbo = null;
             //jQuery("#timeRemaining").html("Countdown ended.");
             clearInterval(interval);
@@ -294,9 +289,8 @@ include_once("config.php");
                 text = "Belum tahu mau ngapain";
                 //window.location.href = 'adl2.html';
             }
-            msg.text = text;
+            responsiveVoice.speak(text, voice, {volume:volume});
             document.getElementById("iWantTo").innerHTML = text;
-            speechSynthesis.speak(msg);
             timesLeft = 0;
             timesRight = 0;
             refreshInterval = setInterval(function() {
