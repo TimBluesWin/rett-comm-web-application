@@ -64,6 +64,12 @@
             top:2%;
             position:absolute;
         }
+        .soundContainer{
+            left:5%;
+            top:2%;
+            position:absolute;
+            background-color:white;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
@@ -91,6 +97,16 @@ include_once("config.php");
             <a href="tidur-mandi.php">Tidur-Mandi</a>
         </div>
     </div>-->
+    <div class="soundContainer">
+        Volume: <input type="range" min="1" max="100" value="100" id="volume" onchange="changeVolume()">
+        <br>
+        Voice:
+        <select onChange="changeVoice()" id="voice">
+            <option value="f" selected="selected">Perempuan</option>
+            <option value="m">Laki-laki</option>
+        </select>
+
+    </div>
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
     <div class="timers">
         Durasi melihat:
@@ -240,6 +256,37 @@ include_once("config.php");
 
     });
 
+    function changeVoice()
+    {
+        determineVoice();
+        changeSomething();
+    }
+
+    function changeVolume()
+    {
+        determineVolume();
+        changeSomething();
+    }
+
+    function determineVoice()
+    {
+        let gender = document.getElementById("voice").value;
+        if(gender == "m")
+        {
+            voice = "Indonesian Male";
+        }
+        else if(gender == "f")
+        {
+            voice = "Indonesian Female";
+        }
+
+    }
+
+    function determineVolume()
+    {
+        volume = document.getElementById("volume").value / 100 * 1;
+    }
+
     function timeToReload(interval, timeRefresh)
     {
         timeRefresh -= 1;
@@ -257,8 +304,6 @@ include_once("config.php");
         jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
         if(timeRemaining <= 0)
         {
-            let voice = "Indonesian Female";
-            let volume = 1;
             let cbo = null;
             //jQuery("#timeRemaining").html("Countdown ended.");
             clearInterval(interval);
@@ -351,21 +396,17 @@ include_once("config.php");
     // create instance
     let body = document.body;
     let width = body.clientWidth;
-    setInterval(function() {
-        trackData = true;
-    }, 3);
-
-    let trackData = false;
+    let voice = null
+    let volume = null;
+    determineVolume();
+    determineVoice();
 
     let lastX, lastY;
 
     body.onmousemove = function(ev) {
 
-        if (trackData) {
-            lastX = ev.pageX;
-            lastY = ev.pageY;
-            trackData = false;
-        }
+        lastX = ev.pageX;
+        lastY = ev.pageY;
         if(lastX < width * 0.45)
         {
             //console.log("Left: " + timesLeft + "\n");
