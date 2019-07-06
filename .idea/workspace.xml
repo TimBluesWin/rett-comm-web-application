@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/makanApa.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mama.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minumApa.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/papa-mama.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/papa.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sepupu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tidur-mandi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forCaregiver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forCaregiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/forCaregiver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainMenu3.php" beforeDir="false" afterPath="$PROJECT_DIR$/mainMenu3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makanApa.php" beforeDir="false" afterPath="$PROJECT_DIR$/makanApa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makanapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/makanapa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mama-kakak.html" beforeDir="false" afterPath="$PROJECT_DIR$/mama-kakak.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minumApa.php" beforeDir="false" afterPath="$PROJECT_DIR$/minumApa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minumapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/minumapa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papa-kakak.html" beforeDir="false" afterPath="$PROJECT_DIR$/papa-kakak.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papa.php" beforeDir="false" afterPath="$PROJECT_DIR$/papa.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,56 +30,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainMenu3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="278" column="46" selection-start-line="278" selection-start-column="46" selection-end-line="278" selection-end-column="46" />
+            <state relative-caret-position="396">
+              <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/makanApa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="108" column="56" selection-end-line="403" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addCustomActivity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minumApa.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4845">
+              <caret line="285" column="77" selection-start-line="285" selection-start-column="77" selection-end-line="285" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forCaregiver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mama-kakak.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3077">
+              <caret line="181" column="83" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/papa-kakak.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3383">
+              <caret line="199" column="87" selection-start-line="199" selection-start-column="87" selection-end-line="199" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/papa-mama.html">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="108" column="60" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addCustomActivity.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tidur-mandi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="114" column="18" lean-forward="true" selection-end-line="402" />
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,6 +111,8 @@
       <find>forCare</find>
       <find>success</find>
       <find>forCaregiver</find>
+      <find>speak</find>
+      <find>SpeechSynthesis</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,14 +127,9 @@
         <option value="$PROJECT_DIR$/mainMenuDebug.html" />
         <option value="$PROJECT_DIR$/mainMenu3.html" />
         <option value="$PROJECT_DIR$/adl2.html" />
-        <option value="$PROJECT_DIR$/makanapa.html" />
-        <option value="$PROJECT_DIR$/minumapa.html" />
         <option value="$PROJECT_DIR$/papa-mama.html" />
-        <option value="$PROJECT_DIR$/mama-kakak.html" />
-        <option value="$PROJECT_DIR$/papa-kakak.html" />
         <option value="$PROJECT_DIR$/sepupu.html" />
         <option value="$PROJECT_DIR$/addActivity.html" />
-        <option value="$PROJECT_DIR$/forCaregiver.html" />
         <option value="$PROJECT_DIR$/addCustomActivity.html" />
         <option value="$PROJECT_DIR$/customizeActivity.html" />
         <option value="$PROJECT_DIR$/customizeActivity.php" />
@@ -133,11 +138,17 @@
         <option value="$PROJECT_DIR$/tidur-mandi.php" />
         <option value="$PROJECT_DIR$/sepupu.php" />
         <option value="$PROJECT_DIR$/papa-mama.php" />
-        <option value="$PROJECT_DIR$/papa.php" />
         <option value="$PROJECT_DIR$/mama.php" />
-        <option value="$PROJECT_DIR$/mainMenu3.php" />
+        <option value="$PROJECT_DIR$/papa.php" />
+        <option value="$PROJECT_DIR$/forCaregiver.html" />
+        <option value="$PROJECT_DIR$/forCaregiver.php" />
+        <option value="$PROJECT_DIR$/mama-kakak.html" />
         <option value="$PROJECT_DIR$/makanApa.php" />
+        <option value="$PROJECT_DIR$/minumapa.html" />
+        <option value="$PROJECT_DIR$/makanapa.html" />
+        <option value="$PROJECT_DIR$/papa-kakak.html" />
         <option value="$PROJECT_DIR$/minumApa.php" />
+        <option value="$PROJECT_DIR$/mainMenu3.php" />
       </list>
     </option>
   </component>
@@ -146,8 +157,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="699" />
-    <option name="y" value="216" />
+    <option name="x" value="338" />
+    <option name="y" value="165" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -163,6 +174,11 @@
             <path>
               <item name="finalProgram" type="b2602c69:ProjectViewProjectNode" />
               <item name="finalProgram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finalProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalProgram" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-4.0.0-dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,7 +238,9 @@
       <workItem from="1561559602699" duration="4644000" />
       <workItem from="1561618437184" duration="782000" />
       <workItem from="1562044627133" duration="250000" />
-      <workItem from="1562045988963" duration="4668000" />
+      <workItem from="1562045988963" duration="17385000" />
+      <workItem from="1562314008486" duration="599000" />
+      <workItem from="1562401685760" duration="812000" />
     </task>
     <task id="LOCAL-00001" summary="Tidying up the code slightly">
       <created>1558502248885</created>
@@ -476,17 +494,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562056330489</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add all the activity pages.">
+      <created>1562061486729</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1562061486729</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66384000" />
+    <option name="totallyTimeSpent" value="80512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39485627" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.8615734" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -534,7 +559,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add pictures.&#10;&#10;This commit aims to add additional pictures which will be used to show for the patient." />
     <MESSAGE value="Change the method after 10 seconds to message.&#10;&#10;The previous implementation of the webpage accidentally redirects the page to adl2.html if there's not enough cursor movement. This commit fixes that such that it will show the message &quot;Belum tahu mau ngapain&quot;." />
     <MESSAGE value="Add contents to sepupu.html&#10;&#10;This commit aims" />
     <MESSAGE value="Add debug output to the committed files, and store them to database." />
@@ -559,19 +583,13 @@
     <MESSAGE value="Change the hyperlink of the buttons on the top of the screen." />
     <MESSAGE value="Remove all manually-added images" />
     <MESSAGE value="Edit the output of addCustomActivity.php&#10;&#10;We remove the debugging output for the addCustomActivity.php, and we also add the option to go back to the main menu after adding activity." />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit the output of addCustomActivity.php&#10;&#10;We remove the debugging output for the addCustomActivity.php, and we also add the option to go back to the main menu after adding activity." />
+    <MESSAGE value="Add all the activity pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all the activity pages." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainMenu.html" />
     <entry file="file://$PROJECT_DIR$/showActivities.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minumapa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="165" column="9" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/adl2.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -586,37 +604,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/papa-kakak.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="95" selection-start-line="69" selection-start-column="95" selection-end-line="69" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/papa-mama.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sepupu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mama-kakak.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="69" column="95" selection-start-line="69" selection-start-column="95" selection-end-line="69" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -637,24 +628,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forCaregiver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/makanapa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2958">
-          <caret line="174" column="84" selection-start-line="174" selection-start-column="12" selection-end-line="174" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -696,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/papa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="276" column="86" selection-end-line="402" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/papa-mama.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -713,7 +683,7 @@
     <entry file="file://$PROJECT_DIR$/tidur-mandi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
-          <caret line="114" column="18" lean-forward="true" selection-end-line="402" />
+          <caret line="114" column="18" selection-end-line="402" />
         </state>
       </provider>
     </entry>
@@ -727,28 +697,93 @@
     <entry file="file://$PROJECT_DIR$/addCustomActivity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
+    <entry file="file://$PROJECT_DIR$/forCaregiver.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="278" column="46" selection-start-line="278" selection-start-column="46" selection-end-line="278" selection-end-column="46" />
+        <state relative-caret-position="391">
+          <caret line="23" column="7" selection-start-line="1" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makanapa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="206" column="12" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minumapa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2444">
+          <caret line="191" column="59" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/makanApa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="108" column="56" selection-end-line="403" />
+        <state relative-caret-position="68">
+          <caret line="257" selection-start-line="257" selection-end-line="304" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/minumApa.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4845">
+          <caret line="285" column="77" selection-start-line="285" selection-start-column="77" selection-end-line="285" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forCaregiver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mama-kakak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="181" column="83" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa-kakak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3383">
+          <caret line="199" column="87" selection-start-line="199" selection-start-column="87" selection-end-line="199" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa-mama.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="108" column="60" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

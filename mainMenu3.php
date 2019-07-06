@@ -6,32 +6,32 @@
 
         .iWantTo {
             position:absolute;
-            top: 15%;
+            top: 5%;
             left:50%;
             transform: translate(-50%, -50%);
             background-color: white;
-            font-size: 36px;
+            font-size: 16px;
         }
         #chosenLeftOption {
             position: absolute;
-            bottom: 5%;
+            bottom: 2%;
             left: 15%;
             transform: translate(-50%, -50%);
             background-color: white;
-            font-size: 36px
+            font-size: 16px
         }
         #chosenRightOption {
             position: absolute;
-            bottom: 5%;
+            bottom: 2%;
             left: 85%;
             transform: translate(-50%, -50%);
             background-color: white;
-            font-size: 36px
+            font-size: 16px
         }
         #timeRemaining {
             position: absolute;
             left:35%;
-            bottom: 5%;
+            bottom: 2%;
             align-content: center;
             background-color: white;
         }
@@ -39,7 +39,7 @@
         .timers{
             left:35%;
             position: absolute;
-            bottom: 15%;
+            bottom: 7%;
             align-content: center;
             background-color: white;
         }
@@ -62,7 +62,7 @@
 
         .forCaregiver{
             right:5%;
-            top:10%;
+            top:2%;
             position:absolute;
         }
     </style>
@@ -76,6 +76,7 @@
 include_once("config.php");
 ?>
 <div class="pictures" style="width:100%; height:100%; z-index:1;">
+    <!--
     <div class="row">
         <div class="col-sm-3" id="makan-minum" style="background-color:aquamarine;">
             <a href="mainMenu3.php">Makan-Minum</a>
@@ -89,7 +90,7 @@ include_once("config.php");
         <div class="col-sm-3" id="tidur-mandi" style="background-color:BlanchedAlmond;">
             <a href="tidur-mandi.php">Tidur-Mandi</a>
         </div>
-    </div>
+    </div>-->
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
     <div class="timers">
         Durasi melihat:
@@ -256,33 +257,46 @@ include_once("config.php");
         jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
         if(timeRemaining <= 0)
         {
+            const msg = new SpeechSynthesisUtterance();
+            msg.volume = 1;
+            msg.rate = 1;
+            msg.pitch = 1;
+            let text = "";
+            msg.voiceURI = "Microsoft Andika - Indonesian (Indonesia)";
+            msg.lang = "id-ID";
             let cbo = null;
             //jQuery("#timeRemaining").html("Countdown ended.");
             clearInterval(interval);
             if(timesLeft < 10 && timesRight < 10)
             {
-                document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
+                text = "Belum tahu mau ngapain";
+                document.getElementById("iWantTo").style.backgroundColor = "pink";
             }
             else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
             {
-                //cbo = document.getElementById("chosenLeftOption");
-                //let leftActivity = cbo.options[cbo.selectedIndex].text;
-                //document.getElementById("iWantTo").innerHTML = "Saya mau " + leftActivity;
-                window.location.href = 'makanApa.php'
-
+                cbo = document.getElementById("chosenLeftOption");
+                let leftActivity = cbo.options[cbo.selectedIndex].text;
+                text = "Saya mau " + leftActivity;
+                //window.location.href = 'makanApa.php'
+                document.getElementById("iWantTo").style.backgroundColor = "deepskyblue";
             }
             else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
             {
-                //cbo = document.getElementById("chosenRightOption");
-                //let rightActivity = cbo.options[cbo.selectedIndex].text;
-                //document.getElementById("iWantTo").innerHTML = "Saya mau " + rightActivity;
-                window.location.href = 'minumApa.php'
+                cbo = document.getElementById("chosenRightOption");
+                let rightActivity = cbo.options[cbo.selectedIndex].text;
+                text = "Saya mau " + rightActivity;
+                document.getElementById("iWantTo").style.backgroundColor = "yellow";
+                //window.location.href = 'minumApa.php'
             }
             else
             {
                 document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
+                text = "Belum tahu mau ngapain";
                 //window.location.href = 'adl2.html';
             }
+            msg.text = text;
+            document.getElementById("iWantTo").innerHTML = text;
+            speechSynthesis.speak(msg);
             timesLeft = 0;
             timesRight = 0;
             refreshInterval = setInterval(function() {
