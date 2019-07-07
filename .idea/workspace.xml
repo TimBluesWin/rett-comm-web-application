@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainMenu.html" afterDir="false" />
+    <list default="true" id="b0ea743b-52ad-41a7-ac1f-a711e81306cd" name="Default Changelist" comment="Add .gitignore file">
+      <change afterPath="$PROJECT_DIR$/forCaregiver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forCaregiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/forCaregiver.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,49 +16,84 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1853064267">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mainMenu.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainMenu3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="76" column="28" lean-forward="true" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+            <state relative-caret-position="177">
+              <caret line="141" column="9" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forCaregiver.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/responsiveVoice.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1972">
+              <caret line="116" column="275" selection-start-line="116" selection-start-column="270" selection-end-line="116" selection-end-column="275" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forCaregiver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>option</find>
+      <find>$_Fi</find>
+      <find>include</find>
+      <find>left act</find>
+      <find>dat</find>
+      <find>activity_id</find>
+      <find>activity_id_right</find>
+      <find>forCare</find>
+      <find>success</find>
+      <find>forCaregiver</find>
+      <find>SpeechSynthesis</find>
+      <find>speak</find>
+      <find>trackData</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,20 +102,47 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mainMenu.html" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/addActivity.php" />
+        <option value="$PROJECT_DIR$/mainMenuDebug.html" />
+        <option value="$PROJECT_DIR$/mainMenu3.html" />
+        <option value="$PROJECT_DIR$/adl2.html" />
+        <option value="$PROJECT_DIR$/papa-mama.html" />
+        <option value="$PROJECT_DIR$/sepupu.html" />
+        <option value="$PROJECT_DIR$/addActivity.html" />
+        <option value="$PROJECT_DIR$/addCustomActivity.html" />
+        <option value="$PROJECT_DIR$/customizeActivity.html" />
+        <option value="$PROJECT_DIR$/customizeActivity.php" />
+        <option value="$PROJECT_DIR$/getActivity.php" />
+        <option value="$PROJECT_DIR$/addCustomActivity.php" />
+        <option value="$PROJECT_DIR$/tidur-mandi.php" />
+        <option value="$PROJECT_DIR$/sepupu.php" />
+        <option value="$PROJECT_DIR$/papa-mama.php" />
+        <option value="$PROJECT_DIR$/mama.php" />
+        <option value="$PROJECT_DIR$/papa.php" />
+        <option value="$PROJECT_DIR$/forCaregiver.php" />
+        <option value="$PROJECT_DIR$/mama-kakak.html" />
+        <option value="$PROJECT_DIR$/makanApa.php" />
+        <option value="$PROJECT_DIR$/minumapa.html" />
+        <option value="$PROJECT_DIR$/makanapa.html" />
+        <option value="$PROJECT_DIR$/papa-kakak.html" />
+        <option value="$PROJECT_DIR$/minumApa.php" />
+        <option value="$PROJECT_DIR$/responsiveVoice.js" />
+        <option value="$PROJECT_DIR$/mainMenu3.php" />
+        <option value="$PROJECT_DIR$/forCaregiver.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="PhpServers">
+    <servers />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1345" />
-    <option name="height" value="688" />
+    <option name="x" value="338" />
+    <option name="y" value="165" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -86,25 +150,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Program" type="462c0819:PsiDirectoryNode" />
+              <item name="finalProgram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finalProgram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../php/php.exe" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -118,6 +188,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="1" Folder0="C:\Users\Timmy\Documents\Dictionaries" CustomDictionaries="1" CustomDictionary0="C:\Users\Timmy\Documents\Dictionaries\Indonesia.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -129,22 +200,335 @@
       <option name="presentableId" value="Default" />
       <updated>1540724610904</updated>
       <workItem from="1540724613670" duration="401000" />
+      <workItem from="1558501165064" duration="1495000" />
+      <workItem from="1558516773731" duration="781000" />
+      <workItem from="1558518100948" duration="1028000" />
+      <workItem from="1559283462571" duration="5513000" />
+      <workItem from="1560145068203" duration="183000" />
+      <workItem from="1560916978747" duration="331000" />
+      <workItem from="1560917552233" duration="9614000" />
+      <workItem from="1561204358579" duration="1604000" />
+      <workItem from="1561193180247" duration="11356000" />
+      <workItem from="1561409090752" duration="190000" />
+      <workItem from="1561469481567" duration="18950000" />
+      <workItem from="1561551170672" duration="4594000" />
+      <workItem from="1561559602699" duration="4644000" />
+      <workItem from="1561618437184" duration="782000" />
+      <workItem from="1562044627133" duration="250000" />
+      <workItem from="1562045988963" duration="17385000" />
+      <workItem from="1562314008486" duration="599000" />
+      <workItem from="1562401685760" duration="5884000" />
+      <workItem from="1562429640941" duration="1189000" />
+      <workItem from="1562503964464" duration="596000" />
+      <workItem from="1562504836905" duration="899000" />
     </task>
+    <task id="LOCAL-00001" summary="Tidying up the code slightly">
+      <created>1558502248885</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558502248885</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add XML Files">
+      <created>1558502273128</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558502273128</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add JQuery 3.4.1 file">
+      <created>1558502313369</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558502313369</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Change title of minumapa.html">
+      <created>1558517222980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558517222980</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Tidying up code">
+      <created>1558517501039</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558517501039</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Final Version Program">
+      <created>1560917717343</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560917717343</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add missing files">
+      <created>1560917910558</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560917910558</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Make the div inside the bootstrap clickable">
+      <created>1560925151433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1560925151433</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Tidying up code">
+      <created>1560925182266</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560925182266</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add empty files">
+      <created>1560928717285</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560928717285</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Edit files">
+      <created>1560928738464</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560928738464</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add pictures.&#10;&#10;This commit aims to add additional pictures which will be used to show for the patient.">
+      <created>1560928770663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560928770663</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Change the method after 10 seconds to message.&#10;&#10;The previous implementation of the webpage accidentally redirects the page to adl2.html if there's not enough cursor movement. This commit fixes that such that it will show the message &quot;Belum tahu mau ngapain&quot;.">
+      <created>1560928946646</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560928946646</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add contents to sepupu.html&#10;&#10;This commit aims">
+      <created>1561194061960</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1561194061960</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add debug output to the committed files, and store them to database.">
+      <created>1561194848550</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1561194848550</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add menu for caregiver.&#10;&#10;This commit aims to add the navigation menu for caregiver, as requested by Doctor Nita. Currently the requests are to add custom activities, as well as the combinations. The addCustomActivity.html and customizeActivity.html files are currently still barebones.">
+      <created>1561195534183</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1561195534183</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add basic gui for addCustomActivity.html&#10;&#10;This commit first just adds the menu for adding custom activity. It can not done anything to actually adding the activity yet.">
+      <created>1561266357788</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1561266357788</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Halfway there to upload activity.&#10;&#10;This commit makes the user able to upload the image. The image is checked in terms of contents and extension, whether the uploaded image is actually an image file or not. Once the image is okay, the filename is then hashed using SHA256 based on the current time. Now, the only task remaining for uploading the image is to actually upload the image to the server, and store the activity details into the database.">
+      <created>1561300837938</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1561300837938</updated>
+    </task>
+    <task id="LOCAL-00019" summary="File upload code successful. We use move_uploaded_file to move the file to the server. However, we need to change the destination path from &quot;\images\&quot; to &quot;images\&quot;.">
+      <created>1561301874661</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561301874661</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Upload to database successful. This uses prepared statements to protect against SQL Injections.">
+      <created>1561306366814</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1561306366814</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add the option to go back for the caregiver. This will be more convenient for the caregiver than say, pressing back button.">
+      <created>1561470372144</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1561470372144</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Select activity from the activity list.&#10;&#10;This commit replaces the activity label with the combo box, such that the caregiver can customize the activities in the website based on their needs.">
+      <created>1561484468022</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1561484468022</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Delete unimportant array, we tried to use array() on PHP, but turns out it's more difficult">
+      <created>1561514046210</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1561514046210</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Remove a few warnings from PHPStorm.">
+      <created>1561514557927</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1561514557927</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Remove div tag for the options.&#10;&#10;Previously, we use &quot;div&quot; tags for the option text. Now that we use combobox to represent the current option, we don't need to use div tags anymore. In fact, using it makes it uglier.">
+      <created>1561515983267</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1561515983267</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Get the picture from the database.&#10;&#10;This commit aims to get the picture from the database, corresponding to the selected option from the combo box. This is achieved by using AJAX.">
+      <created>1561557605273</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1561557605273</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Do the same for the right option.">
+      <created>1561558073040</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1561558073040</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Remove unneccessary coding.">
+      <created>1561558345519</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1561558345519</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add options to change the time to look over the options and the refresh.&#10;&#10;This commit adds the options for the caregiver to change the time for the patient to look to one options, as well as time for the website to refresh itself, as requested by Doctor Nita. This allows the caregiver to adapt to different focus times for each patient. However, the time is still not yet functional.">
+      <created>1561566309233</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1561566309233</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Make the buttons functional.&#10;&#10;This commit makes the timer functional, as well as the countdown. However, this still does not include the change of page after the time has passed.">
+      <created>1561567061114</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1561567061114</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Make the website goes to the appropriate page, depending on the cursor movement.">
+      <created>1561567478937</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1561567478937</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed.">
+      <created>1561567767139</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1561567767139</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Adds &quot;Add activity&quot; button to the website.&#10;&#10;This commit aims to connect the addCustomActivity.html to the site. We just need to add button with a href to the addCustomActivity.html.">
+      <created>1562054803133</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1562054803133</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Change the hyperlink of the buttons on the top of the screen.">
+      <created>1562055229130</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1562055229130</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Remove all manually-added images">
+      <created>1562055250682</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1562055250682</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Edit the output of addCustomActivity.php&#10;&#10;We remove the debugging output for the addCustomActivity.php, and we also add the option to go back to the main menu after adding activity.">
+      <created>1562056330489</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1562056330489</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Add all the activity pages.">
+      <created>1562061486729</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1562061486729</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add numerous features to the web applications">
+      <created>1562403243660</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1562403243660</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Change the TTS to use responsiveVoice instead.&#10;&#10;Windows 10 does not have male indonesian voice, so we need to use different API.">
+      <created>1562404668076</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1562404668076</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Make the program able to change the volume, as well as the voice.&#10;&#10;ResponsiveJS has voices for both male and female Indonesian voices; IIRC Mr. Eka asked such that we should be able to change the volume, as well as changing the voice between male and female. This is achieved by using determineVoice and determineVolume function to get the values from the voice and volume inputs, and every time these values are changed, we also reset the timer in changeSomething method.">
+      <created>1562434423827</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1562434423827</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Remove unnecessary files">
+      <created>1562506092183</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1562506092183</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Add .gitignore file">
+      <created>1562506131071</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1562506131071</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401000" />
+    <option name="totallyTimeSpent" value="88268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -152,22 +536,280 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37670198" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Halfway there to upload activity.&#10;&#10;This commit makes the user able to upload the image. The image is checked in terms of contents and extension, whether the uploaded image is actually an image file or not. Once the image is okay, the filename is then hashed using SHA256 based on the current time. Now, the only task remaining for uploading the image is to actually upload the image to the server, and store the activity details into the database." />
+    <MESSAGE value="File upload code successful. We use move_uploaded_file to move the file to the server. However, we need to change the destination path from &quot;\images\&quot; to &quot;images\&quot;." />
+    <MESSAGE value="Upload to database successful. This uses prepared statements to protect against SQL Injections." />
+    <MESSAGE value="Add the option to go back for the caregiver. This will be more convenient for the caregiver than say, pressing back button." />
+    <MESSAGE value="Select activity from the activity list.&#10;&#10;This commit replaces the activity label with the combo box, such that the caregiver can customize the activities in the website based on their needs." />
+    <MESSAGE value="Delete unimportant array, we tried to use array() on PHP, but turns out it's more difficult" />
+    <MESSAGE value="Remove a few warnings from PHPStorm." />
+    <MESSAGE value="Remove div tag for the options.&#10;&#10;Previously, we use &quot;div&quot; tags for the option text. Now that we use combobox to represent the current option, we don't need to use div tags anymore. In fact, using it makes it uglier." />
+    <MESSAGE value="Get the picture from the database.&#10;&#10;This commit aims to get the picture from the database, corresponding to the selected option from the combo box. This is achieved by using AJAX." />
+    <MESSAGE value="Do the same for the right option." />
+    <MESSAGE value="Remove unneccessary coding." />
+    <MESSAGE value="Add options to change the time to look over the options and the refresh.&#10;&#10;This commit adds the options for the caregiver to change the time for the patient to look to one options, as well as time for the website to refresh itself, as requested by Doctor Nita. This allows the caregiver to adapt to different focus times for each patient. However, the time is still not yet functional." />
+    <MESSAGE value="Make the buttons functional.&#10;&#10;This commit makes the timer functional, as well as the countdown. However, this still does not include the change of page after the time has passed." />
+    <MESSAGE value="Make the website goes to the appropriate page, depending on the cursor movement." />
+    <MESSAGE value="Resets the timesLeft, timesRight, and notDetected variables to 0 after the pictures are changed." />
+    <MESSAGE value="Adds &quot;Add activity&quot; button to the website.&#10;&#10;This commit aims to connect the addCustomActivity.html to the site. We just need to add button with a href to the addCustomActivity.html." />
+    <MESSAGE value="Change the hyperlink of the buttons on the top of the screen." />
+    <MESSAGE value="Remove all manually-added images" />
+    <MESSAGE value="Edit the output of addCustomActivity.php&#10;&#10;We remove the debugging output for the addCustomActivity.php, and we also add the option to go back to the main menu after adding activity." />
+    <MESSAGE value="Add all the activity pages." />
+    <MESSAGE value="Add numerous features to the web applications" />
+    <MESSAGE value="Change the TTS to use responsiveVoice instead.&#10;&#10;Windows 10 does not have male indonesian voice, so we need to use different API." />
+    <MESSAGE value="Make the program able to change the volume, as well as the voice.&#10;&#10;ResponsiveJS has voices for both male and female Indonesian voices; IIRC Mr. Eka asked such that we should be able to change the volume, as well as changing the voice between male and female. This is achieved by using determineVoice and determineVolume function to get the values from the voice and volume inputs, and every time these values are changed, we also reset the timer in changeSomething method." />
+    <MESSAGE value="Remove unnecessary files" />
+    <MESSAGE value="Add .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore file" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mainMenu.html">
+    <entry file="file://$PROJECT_DIR$/mainMenu.html" />
+    <entry file="file://$PROJECT_DIR$/showActivities.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adl2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="76" column="28" lean-forward="true" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+        <state relative-caret-position="2363">
+          <caret line="139" column="84" selection-start-line="139" selection-start-column="84" selection-end-line="139" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sepupu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenuDebug.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="101" column="22" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customizeActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="50" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sepupu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="276" column="25" selection-end-line="401" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mama.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa-mama.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="269" column="18" selection-start-line="269" selection-start-column="18" selection-end-line="269" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tidur-mandi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="114" column="18" selection-end-line="402" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addCustomActivity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addCustomActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makanapa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="206" column="12" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minumapa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2444">
+          <caret line="191" column="59" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makanApa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="257" selection-start-line="257" selection-end-line="304" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainMenu3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="141" column="9" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/responsiveVoice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="275" selection-start-line="116" selection-start-column="270" selection-end-line="116" selection-end-column="275" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minumApa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4845">
+          <caret line="285" column="77" selection-start-line="285" selection-start-column="77" selection-end-line="285" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mama-kakak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="181" column="83" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa-kakak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3383">
+          <caret line="199" column="87" selection-start-line="199" selection-start-column="87" selection-end-line="199" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papa-mama.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forCaregiver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forCaregiver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
