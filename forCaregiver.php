@@ -6,7 +6,6 @@ include("config.php");
 <html lang="en">
 <head>
     <title> Untuk pengasuh </title>
-    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
 </head>
 <body>
 <a href="addCustomActivity.html">Tambah aktivitas</a>
