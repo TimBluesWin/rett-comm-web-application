@@ -10,18 +10,7 @@ include("config.php");
 </head>
 <body>
 <a href="addCustomActivity.html">Tambah aktivitas</a>
-<div class="container" style="margin-top: 20px">
-    <h2>Daftar aktivitas</h2>
-    <hr>
-    <table class="table table-striped table-hover table-sm table-bordered">
-        <thead class="thead-dark">
-        <tr>
-            <th>Activity ID</th>
-            <th>Activity Name</th>
-            <th>Activity Image</th>
-        </tr>
-        </thead>
-    </table>
-</div>
+<br>
+<a href="addPatient.html">Tambah Pasien</a>
 </body>
 </html>
