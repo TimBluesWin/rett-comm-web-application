@@ -5,14 +5,16 @@
     <title>Add Patient</title>
 </head>
 <body>
-    <form action="addPatient.php" method="POST">
-        Nama Depan: <input type="text" id="firstName" name="firstName">
+    <form action="addPatientAction.php" method="POST">
+        Nama Depan: <input type="text" id="namaDepan" name="namaDepan">
         <br>
-        Nama Belakang: <input type="text" id="lastName" name="lastName">
+        Nama Belakang: <input type="text" id="namaBelakang" name="namaBelakang">
         <br>
-        Umur: <input type="number" id="age" name="age">
+        Tanggal Lahir: <input type="date" id="tanggalLahir" name="tanggalLahir"
         <br>
-        Nama Difabilitas: <input type="text" id="difability" name="difability">
+        Alamat: <textarea name="alamat" id="alamat" rows="3" cols="50"></textarea>
+        <br>
+        Nama Difabilitas: <input type="text" id="difabilitas" name="difabilitas">
         <br>
         <input type="submit" value="Unggah Data Pasien" name="submit">
     </form>
