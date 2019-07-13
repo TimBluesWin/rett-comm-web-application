@@ -64,6 +64,11 @@
             top:2%;
             position:absolute;
         }
+        .patients{
+            right:5%;
+            top:10%;
+            position:absolute;
+        }
         .soundContainer{
             left:5%;
             top:2%;
@@ -134,6 +139,18 @@ include_once("config.php");
             ?>
         </select>
         <a href="addCustomActivity.html"><button class="forCaregiver" value="Add Activity">Add Activity</button></a>
+        <div class="patients">
+            <select id="patients">
+            <?php
+            $sqlPasien = "Select id, nama_depan, nama_belakang from pasien";
+            $result = mysqli_query($con, $sqlPasien);
+            while($row = mysqli_fetch_array($result))
+            {
+                echo "<option value=".$row['id'].">".$row['nama_depan']." ".$row['nama_belakang']."</option>";
+            }
+            ?>
+        </select>
+        </div>
     </div>
     <div id="timeRemaining">Time to look: 10</div>
     <div class="option">
