@@ -128,7 +128,7 @@ include_once("config.php");
             while($row = mysqli_fetch_array($result)) {
                 if($row['activity_name'] == "Makan")
                 {
-                    echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name']."</option>";
                 }
                 else
                 {
@@ -162,7 +162,7 @@ include_once("config.php");
             while($row = mysqli_fetch_array($result)) {
                 if($row['activity_name'] == "Minum")
                 {
-                    echo "<option selected=".$row['activity_id']." value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name']."</option>";
                 }
                 else
                 {
@@ -299,7 +299,7 @@ include_once("config.php");
 
     function determineVolume()
     {
-        volume = document.getElementById("volume").value / 100 * 1;
+        volume = document.getElementById("volume").value / 100;
     }
 
     function timeToReload(interval, timeRefresh)
@@ -313,15 +313,43 @@ include_once("config.php");
         }
         return timeRefresh;
     }
+
+    function storeToDatabase(patient, activity)
+    {
+        alert("Yay!");
+        fetch("addPatientActivity.php", {
+            method:"POST",
+            headers:{
+                "Content-type":"application/x-www-form-urlencoded"
+            },
+            body:"activity_id=" + activity + '&patient_id=' + patient
+        }).then(function(res){
+            if(res.ok)
+            {
+                console.log("Patient's activity added.");
+            }
+            else if(res.status == 401)
+            {
+                console.log("Aktivitas gagal ditambah ke database");
+            }
+        }, function(e){
+            console.log(e);
+        }).catch(function(error){
+            console.log(error);
+        })
+    }
+
     function countdownRemaining(interval, timeRemaining, timeRefresh)
     {
         timeRemaining -= 1;
         jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
+        let text = null;
         if(timeRemaining <= 0)
         {
             let cbo = null;
             //jQuery("#timeRemaining").html("Countdown ended.");
             clearInterval(interval);
+            let selected_activity = 0;
             if(timesLeft < 10 && timesRight < 10)
             {
                 text = "Belum tahu mau ngapain";
@@ -334,6 +362,7 @@ include_once("config.php");
                 text = "Saya mau " + leftActivity;
                 //window.location.href = 'makanApa.php'
                 document.getElementById("iWantTo").style.backgroundColor = "deepskyblue";
+                selected_activity = $('#chosenLeftOption option:selected').val();
             }
             else if(timesRight >= timesLeft * 7/3 && timesRight >= notDetected * 7/3)
             {
@@ -342,6 +371,7 @@ include_once("config.php");
                 text = "Saya mau " + rightActivity;
                 document.getElementById("iWantTo").style.backgroundColor = "yellow";
                 //window.location.href = 'minumApa.php'
+                selected_activity = $('#chosenRightOption option:selected').val();
             }
             else
             {
@@ -353,6 +383,9 @@ include_once("config.php");
             document.getElementById("iWantTo").innerHTML = text;
             timesLeft = 0;
             timesRight = 0;
+            let selected_patient = $('#patients option:selected').val();
+            alert(selected_activity);
+            storeToDatabase(selected_patient, selected_activity);
             refreshInterval = setInterval(function() {
                 timeRefresh = timeToReload(interval, timeRefresh);
             }, 1000)
@@ -411,7 +444,7 @@ include_once("config.php");
     // create instance
     let body = document.body;
     let width = body.clientWidth;
-    let voice = null
+    let voice = null;
     let volume = null;
     determineVolume();
     determineVoice();
