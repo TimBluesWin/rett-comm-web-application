@@ -316,7 +316,7 @@ include_once("config.php");
 
     function storeToDatabase(patient, activity)
     {
-        alert("Yay!");
+        //alert("Yay!");
         fetch("addPatientActivity.php", {
             method:"POST",
             headers:{
@@ -384,7 +384,7 @@ include_once("config.php");
             timesLeft = 0;
             timesRight = 0;
             let selected_patient = $('#patients option:selected').val();
-            alert(selected_activity);
+            //alert(selected_activity);
             storeToDatabase(selected_patient, selected_activity);
             refreshInterval = setInterval(function() {
                 timeRefresh = timeToReload(interval, timeRefresh);
