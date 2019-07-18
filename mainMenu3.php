@@ -138,7 +138,7 @@ include_once("config.php");
             }
             ?>
         </select>
-        <a href="addCustomActivity.html"><button class="forCaregiver" value="Add Activity">Add Activity</button></a>
+        <a href="forCaregiver.php"><button class="forCaregiver" value="Add Activity">Untuk Pengasuh</button></a>
         <div class="patients">
             <select id="patients">
             <?php
