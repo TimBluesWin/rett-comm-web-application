@@ -66,7 +66,14 @@ include("config.php");
                 success:function(data) {
                     if(data != "fail")
                     {
-                        document.getElementById('timeHabit').innerHTML = data.activity_name;
+                        let result = data;
+                        let htmlTable = "<table><tr><th>Nama Aktivitas</th><th>Jumlah</th></tr>";
+                        $.each(result, function(key, value){
+                            htmlTable += "<tr><td>" + value['activity_name'] + "</td><td>" + value['amount'] + "</td></tr>";
+                        });
+                        htmlTable += "</table>";
+                        $('#timeHabit').html(htmlTable);
+
                     }
                     else
                     {
@@ -91,7 +98,13 @@ include("config.php");
                 success:function(data) {
                     if(data != "fail")
                     {
-                        document.getElementById('activityHabit').innerHTML = data.intervals;
+                        let result = data;
+                        let htmlTable = "<table><tr><th>Interval Waktu</th><th>Jumlah</th></tr>";
+                        $.each(result, function(key, value){
+                            htmlTable += "<tr><td>" + value['intervals'] + "</td><td>" + value['count'] + "</td></tr>";
+                        });
+                        htmlTable += "</table>";
+                        $('#activityHabit').html(htmlTable);
                     }
                     else
                     {
