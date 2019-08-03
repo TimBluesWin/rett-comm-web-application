@@ -6,15 +6,15 @@
 </head>
 <body>
     <form action="addPatientAction.php" method="POST">
-        Nama Depan: <input type="text" id="namaDepan" name="namaDepan">
+        Nama Depan: <input type="text" id="namaDepan" name="namaDepan" required>
         <br>
-        Nama Belakang: <input type="text" id="namaBelakang" name="namaBelakang">
+        Nama Belakang: <input type="text" id="namaBelakang" name="namaBelakang" required>
         <br>
-        Tanggal Lahir: <input type="date" id="tanggalLahir" name="tanggalLahir"
+        Tanggal Lahir: <input type="date" id="tanggalLahir" name="tanggalLahir" required>
         <br>
-        Alamat: <textarea name="alamat" id="alamat" rows="3" cols="50"></textarea>
+        Alamat: <textarea name="alamat" id="alamat" rows="3" cols="50" required></textarea>
         <br>
-        Nama Difabilitas: <input type="text" id="difabilitas" name="difabilitas">
+        Nama Difabilitas: <input type="text" id="difabilitas" name="difabilitas" required>
         <br>
         <input type="submit" value="Unggah Data Pasien" name="submit">
     </form>
