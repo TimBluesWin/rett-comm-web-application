@@ -28,12 +28,14 @@ try {
         die('execute() failed: ' . htmlspecialchars($statement->error));
     }
     else{
-        echo "Success.<br> <a href='forCaregiver.php'>Go back to main menu.</a>";
+        echo "Sukses.<br> <a href='forCaregiver.php'>Balik ke menu untuk pengasuh.</a><br>";
+        echo "<a href='mainMenu3.php'>Balik ke menu utama</a>";
     }
 }
 catch (PDOException $e)
 {
-    echo "Error. ".$e->getMessage()."<a href='forCaregiver.php'>Go back to main menu</a>";
+    echo "Error. ".$e->getMessage()."<a href='forCaregiver.php'>Balik ke menu untuk pengasuh.</a>";
+    echo "<a href='mainMenu3.php'>Balik ke menu utama</a>";
 }
 
 
