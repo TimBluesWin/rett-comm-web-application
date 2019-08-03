@@ -48,6 +48,7 @@ include("config.php");
     </select>
     pada pukul <br>
     <div id="activityHabit"></div>
+    <a href="mainMenu3.php">Balik ke menu utama</a>
     <script>
         function determineFromTime()
         {
