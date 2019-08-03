@@ -9,8 +9,6 @@ include("config.php");
     </head>
     <body>
     <script src="jquery-3.4.1.min.js"></script>
-    <script src="timepicker.min.js"></script>
-    <link href="timepicker.min.css" rel="stylesheet"/>
     <a href="addCustomActivity.html">Tambah aktivitas</a>
     <br>
     <a href="addPatient.html">Tambah Pasien</a>
