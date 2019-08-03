@@ -88,7 +88,7 @@ include_once("config.php");
     <div class="soundContainer">
         Volume: <input type="range" min="1" max="100" value="100" id="volume" onchange="changeVolume()">
         <br>
-        Voice:
+        Gender Suara:
         <select onChange="changeVoice()" id="voice">
             <option value="f" selected="selected">Perempuan</option>
             <option value="m">Laki-laki</option>
@@ -137,7 +137,7 @@ include_once("config.php");
         </select>
         </div>
     </div>
-    <div id="timeRemaining">Time to look: 10</div>
+    <div id="timeRemaining">Waktu untuk melihat aktivitas: 10</div>
     <div class="option">
         <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
         <select id="chosenRightOption">
@@ -290,7 +290,7 @@ include_once("config.php");
     function timeToReload(interval, timeRefresh)
     {
         timeRefresh -= 1;
-        jQuery("#timeRemaining").html("Time to refresh: " + timeRefresh);
+        jQuery("#timeRemaining").html("Waktu sebelum refresh: " + timeRefresh);
         if(timeRefresh <= 0)
         {
             clearInterval(interval);
@@ -327,7 +327,7 @@ include_once("config.php");
     function countdownRemaining(interval, timeRemaining, timeRefresh)
     {
         timeRemaining -= 1;
-        jQuery("#timeRemaining").html("Time to look: " + timeRemaining);
+        jQuery("#timeRemaining").html("Waktu untuk melihat aktivitas: " + timeRemaining);
         let text = null;
         if(timeRemaining <= 0)
         {
@@ -379,7 +379,7 @@ include_once("config.php");
         return timeRemaining;
     }
     let timeRemaining = $('#time').val();
-	document.getElementById("time").innerHTML = "Time remaining: " + timeRemaining;
+	document.getElementById("time").innerHTML = "Waktu untuk melihat aktivitas: " + timeRemaining;
     let timeRefresh = $('#refresh').val();
     let refreshInterval = null;
     let countdownInterval = setInterval(function () {
