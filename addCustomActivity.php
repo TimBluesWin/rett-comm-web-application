@@ -40,12 +40,14 @@
         }
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
         {
-            echo "Sorry, only JPG, JPEG, PNG, and GIF files are allowed.";
+            echo "Sorry, only JPG, JPEG, PNG, and GIF files are allowed. <br>";
             $uploadOk = 0;
         }
         if($uploadOk == 0)
         {
-            echo "Sorry, your file was not uploaded.";
+            echo "Sorry, your file was not uploaded. <br>";
+            echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
+            echo "<a href=mainMenu3.php>Go back to main menu</a>";
         }
         else
         {
@@ -68,6 +70,8 @@
             else
             {
                 echo "File failed to be uploaded.";
+                echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
+                echo "<a href=mainMenu3.php>Go back to main menu</a>";
             }
         }
 
