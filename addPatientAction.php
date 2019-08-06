@@ -29,12 +29,14 @@ try {
     }
     else{
         echo "Sukses.<br> <a href='forCaregiver.php'>Balik ke menu untuk pengasuh.</a><br>";
-        echo "<br><a href='mainMenu3.php'>Balik ke menu utama</a>";
+        echo "<a href='addPatient.html'>Tambah pasien lain<br>";
+        echo "<a href='mainMenu3.php'>Balik ke menu utama</a>";
     }
 }
 catch (PDOException $e)
 {
     echo "Error. ".$e->getMessage()."<br><br><a href='forCaregiver.php'>Balik ke menu untuk pengasuh.</a><br>";
+    echo "<a href='addPatient.html'>Tambah pasien lain<br>";
     echo "<a href='mainMenu3.php'>Balik ke menu utama</a>";
 }
 
