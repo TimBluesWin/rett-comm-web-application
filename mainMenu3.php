@@ -99,10 +99,10 @@ include_once("config.php");
     <div class="timers">
         Durasi melihat:
         <input type="number" label="Time Left" id="time" value="10" min="4" required>
-        <input type="button" value="Change time" onclick="changeSomething()"> <br>
+        <input type="button" value="Ubah waktu" onclick="changeSomething()"> <br>
         Durasi sebelum refresh:
         <input type="number" label="Delay to refresh" id="refresh" value="10" min="1" required>
-        <input type="button" value="Change time" onclick="changeSomething()">
+        <input type="button" value="Ubah waktu" onclick="changeSomething()">
     </div>
     <div class="option">
         <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
