@@ -43,7 +43,7 @@
         {
             echo "Maaf, file tidak berhasil diunggah.<br>";
             echo "<br><a href='addCustomActivity.html'>Tambah aktivitas lain</a><br>";
-            echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a>";
+            echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a><br>";
             echo "<a href=mainMenu3.php>Balik ke menu utama</a>";
         }
         else
@@ -61,7 +61,7 @@
                 $file_name = $hashed_file;
                 $statement -> execute();
                 echo "<br><a href='addCustomActivity.html'>Tambah aktivitas lain</a><br>";
-                echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a>";
+                echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a><br>";
                 echo "<a href=mainMenu3.php>Balik ke menu utama</a>";
 
             }
@@ -69,7 +69,7 @@
             {
                 echo "File gagal diunggah.";
                 echo "<br><a href='addCustomActivity.html'>Tambah aktivitas lain</a><br>";
-                echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a>";
+                echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a><br>";
                 echo "<a href=mainMenu3.php>Balik ke menu utama</a>";
             }
         }
