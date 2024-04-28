@@ -21,10 +21,10 @@ if(!empty($_POST['patient_id'])) {
     $end_time = "'".$end_time.":00:00'";
     //echo $end_time;
     //var_dump($start_time, $end_time);
-    $sql = "select activity_name, count(activity_name) as amount from patient_activity p_a inner join " .
+    $sql = "select activity_name_indonesian, count(activity_name_indonesian) as amount from patient_activity p_a inner join " .
         "list_activities l_a on p_a.activity_id = l_a.activity_id where time(activity_time) >= $start_time " .
-        "and patient_id = $patient_id and time(activity_time) <= $end_time group by activity_name ".
-        "order by count(activity_name) desc limit 5";
+        "and patient_id = $patient_id and time(activity_time) <= $end_time group by activity_name_indonesian ".
+        "order by count(activity_name_indonesian) desc limit 5";
     $result_array = array();
     $result = mysqli_query($con, $sql);
 

@@ -111,16 +111,16 @@ include_once("config.php");
         <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
         <select id="chosenLeftOption">
             <?php
-            $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
+            $sql = "SELECT activity_id, activity_name_indonesian, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
-                if($row['activity_name'] == "Makan")
+                if($row['activity_name_indonesian'] == "Makan")
                 {
-                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
                 }
                 else
                 {
-                    echo "<option value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                    echo "<option value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
                 }
 
             }
@@ -145,16 +145,16 @@ include_once("config.php");
         <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
         <select id="chosenRightOption">
             <?php
-            $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
+            $sql = "SELECT activity_id, activity_name_indonesian, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
-                if($row['activity_name'] == "Minum")
+                if($row['activity_name_indonesian'] == "Minum")
                 {
-                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
                 }
                 else
                 {
-                    echo "<option value=".$row['activity_id'].">".$row['activity_name']."</option>";
+                    echo "<option value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
                 }
             }
             ?>

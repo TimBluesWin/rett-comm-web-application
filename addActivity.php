@@ -20,7 +20,7 @@ $current_date = date("Y-m-d H:i:s");
 $mean = $_POST['meanX'];
 $std = $_POST['std'];
 
-$sql = "INSERT INTO activities (activity_name, activity_time, x_coordinate, std_dev)
+$sql = "INSERT INTO activities (activity_name_indonesian, activity_time, x_coordinate, std_dev)
         VALUES ('$activity','$current_date',$mean,$std)";
 
 if ($conn->query($sql) === TRUE) {

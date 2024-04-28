@@ -34,13 +34,13 @@ include("config.php");
     <select id="activities" onchange="determineFromActivity()">
         <?php
 
-        $sql = "SELECT activity_id, activity_name, activity_file_name from list_activities";
+        $sql = "SELECT activity_id, activity_name_indonesian, activity_file_name from list_activities";
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_array($result)) {
-            if ($row['activity_name'] == "Minum") {
-                echo "<option selected='selected' value=" . $row['activity_id'] . ">" . $row['activity_name'] . "</option>";
+            if ($row['activity_name_indonesian'] == "Minum") {
+                echo "<option selected='selected' value=" . $row['activity_id'] . ">" . $row['activity_name_indonesian'] . "</option>";
             } else {
-                echo "<option value=" . $row['activity_id'] . ">" . $row['activity_name'] . "</option>";
+                echo "<option value=" . $row['activity_id'] . ">" . $row['activity_name_indonesian'] . "</option>";
             }
         }
 
@@ -68,7 +68,7 @@ include("config.php");
                         let result = data;
                         let htmlTable = "<table><tr><th>Nama Aktivitas</th><th>Jumlah</th></tr>";
                         $.each(result, function(key, value){
-                            htmlTable += "<tr><td>" + value['activity_name'] + "</td><td>" + value['amount'] + "</td></tr>";
+                            htmlTable += "<tr><td>" + value['activity_name_indonesian'] + "</td><td>" + value['amount'] + "</td></tr>";
                         });
                         htmlTable += "</table>";
                         $('#timeHabit').html(htmlTable);

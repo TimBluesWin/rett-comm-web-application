@@ -54,7 +54,7 @@
             if(move_uploaded_file($_FILES["activityImage"]["tmp_name"], $target_file))
             {
                 echo "File sukses diunggah.<br>";
-                $statement = $conn->prepare("Insert into list_activities(activity_name, activity_file_name) values (?,?)");
+                $statement = $conn->prepare("Insert into list_activities(activity_name_indonesian, activity_file_name) values (?,?)");
                 $statement->bind_param("ss", $name, $file_name);
 
                 $name = $activity;

@@ -4,7 +4,7 @@ $data = array();
 if(!empty($_POST['activity_id'])) {
     $activity_id = $_POST['activity_id'];
     //echo $activity_id;
-    $sql = "select activity_id, activity_name, activity_file_name from list_activities where activity_id = $activity_id";
+    $sql = "select activity_id, activity_name_indonesian, activity_file_name from list_activities where activity_id = $activity_id";
     $result = mysqli_query($con, $sql);
     if ($result->num_rows > 0) {
         $activity_data = $result->fetch_assoc();
