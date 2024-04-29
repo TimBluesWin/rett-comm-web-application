@@ -174,11 +174,11 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    $('#optionLeftImage').attr('src', "images/" + data.activity_file_name);
+                    $('#optionLeftImage').attr('src', "../images/" + data.activity_file_name);
                 }
                 else
                 {
-                    $('#optionLeftImage').attr('src', "images/questionMark.jpg");
+                    $('#optionLeftImage').attr('src', "../images/questionMark.jpg");
                 }
             }
 
@@ -194,11 +194,11 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    $('#optionRightImage').attr('src', "images/" + data.activity_file_name);
+                    $('#optionRightImage').attr('src', "../images/" + data.activity_file_name);
                 }
                 else
                 {
-                    $('#optionRightImage').attr('src', "images/questionMark.jpg");
+                    $('#optionRightImage').attr('src', "../images/questionMark.jpg");
                 }
             }
 
@@ -215,11 +215,11 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    $('#optionLeftImage').attr('src', "images/" + data.activity_file_name);
+                    $('#optionLeftImage').attr('src', "../images/" + data.activity_file_name);
                 }
                 else
                 {
-                    $('#optionLeftImage').attr('src', "images/questionMark.jpg");
+                    $('#optionLeftImage').attr('src', "../images/questionMark.jpg");
                 }
                 changeSomething();
             }
@@ -237,11 +237,11 @@ include_once("config.php");
             success:function(data) {
                 if(data != "fail")
                 {
-                    $('#optionRightImage').attr('src', "images/" + data.activity_file_name);
+                    $('#optionRightImage').attr('src', "../images/" + data.activity_file_name);
                 }
                 else
                 {
-                    $('#optionRightImage').attr('src', "images/questionMark.jpg");
+                    $('#optionRightImage').attr('src', "../images/questionMark.jpg");
                 }
                 changeSomething();
             }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Patient</title>
+</head>
+<body>
+    <a href="forCaregiver.php">Balik ke menu sebelumnya</a>
+    <form action="addPatientAction.php" method="POST">
+        Nama Depan: <input type="text" id="namaDepan" name="namaDepan" required>
+        <br>
+        Nama Belakang: <input type="text" id="namaBelakang" name="namaBelakang" required>
+        <br>
+        Tanggal Lahir: <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+        <br>
+        Alamat: <textarea name="alamat" id="alamat" rows="3" cols="50" required></textarea>
+        <br>
+        Nama Difabilitas: <input type="text" id="difabilitas" name="difabilitas" required>
+        <br>
+        <input type="submit" value="Unggah Data Pasien" name="Unggah Data Pasien">
+    </form>
+</body>
+</html>

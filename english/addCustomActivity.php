@@ -14,7 +14,7 @@
 
         $activity = $_POST['activityName'];
         #specify target directory
-        $target_dir = "images/";
+        $target_dir = "../images/";
         #specify the path name of the file. The name of the image comes from the 'activity_image'
         #from the html; we just need the name. Then, the obtained name is concatenated with the dir.
         $target_file = $target_dir . basename($_FILES["activityImage"]["name"]);
