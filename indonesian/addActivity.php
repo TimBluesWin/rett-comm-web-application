@@ -8,11 +8,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error)
 {
-	die("Connection error: " . $conn->connect_error);
+	die("Kesalahan koneksi: " . $conn->connect_error);
 }
 else
 {
-	echo "success";
+	echo "Koneksi sukses";
 }
 $activity = $_POST['activity'];
 
@@ -24,7 +24,7 @@ $sql = "INSERT INTO activities (activity_name_indonesian, activity_time, x_coord
         VALUES ('$activity','$current_date',$mean,$std)";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Record berhasil ditambah";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

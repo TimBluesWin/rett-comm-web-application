@@ -8,7 +8,7 @@ $time = date("Y-m-d H:i:s");
 $sql = "insert into patient_activity (patient_id, activity_id, activity_time) values(?,?,?)";
 $statement = $con->prepare($sql);
 if ( false===$statement ) {
-    die('prepare() failed: ' . htmlspecialchars($con->error));
+    die('Fungsi prepare() gagal: ' . htmlspecialchars($con->error));
 }
 
 $rc = $statement->bind_param('iis',$patient_id, $activity_id, $time);
@@ -16,18 +16,18 @@ $rc = $statement->bind_param('iis',$patient_id, $activity_id, $time);
 // or there's a type conflict(?), or ....
 if ( false===$rc ) {
     // again execute() is useless if you can't bind the parameters. Bail out somehow.
-    die('bind_param() failed: ' . htmlspecialchars($statement->error));
+    die('Fungsi bind_param() gagal: ' . htmlspecialchars($statement->error));
 }
 
 $rc = $statement->execute();
 // execute() can fail for various reasons. And may it be as stupid as someone tripping over the network cable
 // 2006 "server gone away" is always an option
 if ( false===$rc ) {
-    die('execute() failed: ' . htmlspecialchars($statement->error));
+    die('Fungsi execute() gagal: ' . htmlspecialchars($statement->error));
 }
 else
 {
-    echo "success";
+    echo "Sukses";
 }
 /*
 $timezone_identifiers = DateTimeZone::listIdentifiers();

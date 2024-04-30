@@ -10,12 +10,12 @@ if(!empty($_POST['activity_id'])) {
         $activity_data = $result->fetch_assoc();
         echo json_encode($activity_data);
     } else {
-        echo json_encode("fail");
+        echo json_encode("Gagal");
     }
 }
 else
 {
-    echo json_encode("fail");
+    echo json_encode("Gagal");
 }
 //echo json_encode($data);
 

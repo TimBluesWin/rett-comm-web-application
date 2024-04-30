@@ -314,7 +314,7 @@ include_once("config.php");
         }).then(function(res){
             if(res.ok)
             {
-                console.log("Patient's activity added.");
+                console.log("Aktivitas pasien ditambah");
             }
             else if(res.status == 401)
             {

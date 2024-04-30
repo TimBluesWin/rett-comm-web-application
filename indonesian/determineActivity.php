@@ -14,7 +14,7 @@ if(!empty($_POST['activity_id']) && !empty($_POST['patient_id'])) {
         }
         echo json_encode($result_array);
     } else {
-        echo json_encode("fail");
+        echo json_encode("Gagal");
     }
 }
 else

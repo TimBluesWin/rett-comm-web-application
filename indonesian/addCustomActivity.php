@@ -9,7 +9,7 @@
 
         if ($conn->connect_error)
         {
-            die("Connection error: " . $conn->connect_error);
+            die("Kesalahan koneksi: " . $conn->connect_error);
         }
 
         $activity = $_POST['activityName'];

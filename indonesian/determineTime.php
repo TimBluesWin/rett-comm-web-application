@@ -35,11 +35,11 @@ if(!empty($_POST['patient_id'])) {
         echo json_encode($result_array);
 
     } else {
-        echo json_encode("fail");
+        echo json_encode("Gagal");
     }
 }
 else
 {
-    echo json_encode("fail");
+    echo json_encode("Gagal");
 }
 $con->close();
