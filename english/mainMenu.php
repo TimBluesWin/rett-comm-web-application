@@ -103,7 +103,7 @@ include_once("config.php");
         Duration of seeing:
         <input type="number" label="Time Left" id="time" value="10" min="4" required>
         <input type="button" value="Change time" onclick="changeSomething()"> <br>
-        Durasi sebelum refresh:
+        Duration before refresh:
         <input type="number" label="Delay to refresh" id="refresh" value="10" min="1" required>
         <input type="button" value="Change time" onclick="changeSomething()">
     </div>
@@ -284,11 +284,11 @@ include_once("config.php");
         let gender = document.getElementById("voice").value;
         if(gender == "m")
         {
-            voice = "English Male";
+            voice = "US English Male";
         }
         else if(gender == "f")
         {
-            voice = "English Female";
+            voice = "US English Female";
         }
 
     }
@@ -301,7 +301,7 @@ include_once("config.php");
     function timeToReload(interval, timeRefresh)
     {
         timeRefresh -= 1;
-        jQuery("#timeRemaining").html("Waktu sebelum refresh: " + timeRefresh);
+        jQuery("#timeRemaining").html("Duration before refresh: " + timeRefresh);
         if(timeRefresh <= 0)
         {
             clearInterval(interval);
