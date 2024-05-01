@@ -101,10 +101,10 @@ include_once("config.php");
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
     <div class="timers">
         Durasi melihat:
-        <input type="number" label="Time Left" id="time" value="10" min="4" required>
+        <input type="number" label="Waktu tersisa" id="time" value="10" min="4" required>
         <input type="button" value="Ubah waktu" onclick="changeSomething()"> <br>
         Durasi sebelum refresh:
-        <input type="number" label="Delay to refresh" id="refresh" value="10" min="1" required>
+        <input type="number" label="Jeda untuk refresh" id="refresh" value="10" min="1" required>
         <input type="button" value="Ubah waktu" onclick="changeSomething()">
     </div>
     <div class="option">
