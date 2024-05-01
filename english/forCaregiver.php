@@ -5,14 +5,14 @@ include("config.php");
 <!DOCTYPE html>
 <html lang="en-gb">
     <head>
-        <title> Untuk pengasuh </title>
+        <title> For caregiver </title>
     </head>
     <body>
     <script src="jquery-3.4.1.min.js"></script>
-    <a href="addCustomActivity.html">Tambah aktivitas</a>
+    <a href="addCustomActivity.html">Add activity</a>
     <br>
-    <a href="addPatient.html">Tambah Pasien</a>
-    <h2>Kebiasaan Pasien:</h2>
+    <a href="addPatient.html">Add patient</a>
+    <h2>Patient's habit:</h2>
     <br>
     Nama pasien:
     <select id="patientName" onchange="determineFromName()">
@@ -26,29 +26,34 @@ include("config.php");
         ?>
     </select>
     <br>
-    Aktivitas paling sering dilakukan antara jam <input type="number" value="12" min="0" max="23" id="startTime" onchange="determineFromTime()"> hingga jam <input type="number" value="18" min="0" max="23" id="endTime" onchange="determineFromTime()">
-    adalah: <div id="timeHabit"></div>
+    Activities most often done between <input type="number" value="12" min="0" max="23" id="startTime" onchange="determineFromTime()"> to <input type="number" value="18" min="0" max="23" id="endTime" onchange="determineFromTime()">
+    are: <div id="timeHabit"></div>
     <br>
     <br>
-    Pasien tersebut paling sering
+    That patient does:
     <select id="activities" onchange="determineFromActivity()">
         <?php
 
-        $sql = "SELECT activity_id, activity_name_indonesian, activity_file_name from list_activities";
+        $sql = "SELECT activity_id, activity_name_indonesian, activity_name_english, activity_file_name from list_activities";
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_array($result)) {
-            if ($row['activity_name_indonesian'] == "Minum") {
+            if ($row['activity_name_english'] == "Drink") {
+                echo "<option selected='selected' value=" . $row['activity_id'] . ">" . $row['activity_name_english'] . "</option>";
+            } 
+            else if(empty($row['activity_name_english']))
+            {
                 echo "<option selected='selected' value=" . $row['activity_id'] . ">" . $row['activity_name_indonesian'] . "</option>";
-            } else {
-                echo "<option value=" . $row['activity_id'] . ">" . $row['activity_name_indonesian'] . "</option>";
+            }
+            else {
+                echo "<option value=" . $row['activity_id'] . ">" . $row['activity_name_english'] . "</option>";
             }
         }
 
         ?>
     </select>
-    pada pukul <br>
+    the most often at the following time: <br>
     <div id="activityHabit"></div>
-    <a href="mainMenu3.php">Balik ke menu utama</a>
+    <a href="mainMenu3.php">Go back to the main menu</a>
     <script>
         function determineFromTime()
         {
@@ -66,9 +71,9 @@ include("config.php");
                     if(data != "fail")
                     {
                         let result = data;
-                        let htmlTable = "<table><tr><th>Nama Aktivitas</th><th>Jumlah</th></tr>";
+                        let htmlTable = "<table><tr><th>Activity_name</th><th>Jumlah</th></tr>";
                         $.each(result, function(key, value){
-                            htmlTable += "<tr><td>" + value['activity_name_indonesian'] + "</td><td>" + value['amount'] + "</td></tr>";
+                            htmlTable += "<tr><td>" + !empty(value['activity_name_english']) ? value['activity_name_english'] : value['activity_name_indonesian'] + "</td><td>" + value['amount'] + "</td></tr>";
                         });
                         htmlTable += "</table>";
                         $('#timeHabit').html(htmlTable);
@@ -98,7 +103,7 @@ include("config.php");
                     if(data != "fail")
                     {
                         let result = data;
-                        let htmlTable = "<table><tr><th>Interval Waktu</th><th>Jumlah</th></tr>";
+                        let htmlTable = "<table><tr><th>Time interval</th><th>Amount</th></tr>";
                         $.each(result, function(key, value){
                             htmlTable += "<tr><td>" + value['intervals'] + "</td><td>" + value['count'] + "</td></tr>";
                         });

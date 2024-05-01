@@ -1,7 +1,7 @@
 <meta charset="utf-8"/>
-<html lang="id">
-<head title="Mau melakukan apa?">
-    <title>Mau melakukan apa?</title>
+<html lang="en">
+<head title="What do you want to do?">
+    <title>What do you want to do?</title>
     <style type="text/css">
 
         .iWantTo {
@@ -91,42 +91,46 @@ include_once("config.php");
     <div class="soundContainer">
         Volume: <input type="range" min="1" max="100" value="100" id="volume" onchange="changeVolume()">
         <br>
-        Gender Suara:
+        Voice gender:
         <select onChange="changeVoice()" id="voice">
-            <option value="f" selected="selected">Perempuan</option>
-            <option value="m">Laki-laki</option>
+            <option value="f" selected="selected">Female</option>
+            <option value="m">Male</option>
         </select>
 
     </div>
     <div class="iWantTo" id="iWantTo" style="z-index:2; position:absolute"></div>
     <div class="timers">
-        Durasi melihat:
+        Duration of seeing:
         <input type="number" label="Time Left" id="time" value="10" min="4" required>
-        <input type="button" value="Ubah waktu" onclick="changeSomething()"> <br>
+        <input type="button" value="Change time" onclick="changeSomething()"> <br>
         Durasi sebelum refresh:
         <input type="number" label="Delay to refresh" id="refresh" value="10" min="1" required>
-        <input type="button" value="Ubah waktu" onclick="changeSomething()">
+        <input type="button" value="Change time" onclick="changeSomething()">
     </div>
     <div class="option">
         <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
         <select id="chosenLeftOption">
             <?php
-            $sql = "SELECT activity_id, activity_name_indonesian, activity_file_name from list_activities";
+            $sql = "SELECT activity_id, activity_name_indonesian, activity_name_english, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
-                if($row['activity_name_indonesian'] == "Makan")
+                if($row['activity_name_english'] == "Eat")
+                {
+                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name_english']."</option>";
+                }
+                else if(empty($row['activity_name_english']))
                 {
                     echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
                 }
                 else
                 {
-                    echo "<option value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
+                    echo "<option value=".$row['activity_id'].">".$row['activity_name_english']."</option>";
                 }
 
             }
             ?>
         </select>
-        <a href="forCaregiver.php"><button class="forCaregiver" value="Add Activity">Untuk Pengasuh</button></a>
+        <a href="forCaregiver.php"><button class="forCaregiver" value="Add Activity">For caregiver</button></a>
         <div class="patients">
             <select id="patients">
             <?php
@@ -140,21 +144,25 @@ include_once("config.php");
         </select>
         </div>
     </div>
-    <div id="timeRemaining">Waktu untuk melihat aktivitas: 10</div>
+    <div id="timeRemaining">Time to look at activities: 10</div>
     <div class="option">
         <img id="optionRightImage" style="width:100%; height:100%" alt="minum">
         <select id="chosenRightOption">
             <?php
-            $sql = "SELECT activity_id, activity_name_indonesian, activity_file_name from list_activities";
+            $sql = "SELECT activity_id, activity_name_indonesian, activity_name_english, activity_file_name from list_activities";
             $result = mysqli_query($con, $sql);
             while($row = mysqli_fetch_array($result)) {
-                if($row['activity_name_indonesian'] == "Minum")
+                if($row['activity_name_english'] == "Drink")
+                {
+                    echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name_english']."</option>";
+                }
+                else if(empty($row['activity_name_english']))
                 {
                     echo "<option selected='selected' value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
                 }
                 else
                 {
-                    echo "<option value=".$row['activity_id'].">".$row['activity_name_indonesian']."</option>";
+                    echo "<option value=".$row['activity_id'].">".$row['activity_name_english']."</option>";
                 }
             }
             ?>
@@ -276,11 +284,11 @@ include_once("config.php");
         let gender = document.getElementById("voice").value;
         if(gender == "m")
         {
-            voice = "Indonesian Male";
+            voice = "English Male";
         }
         else if(gender == "f")
         {
-            voice = "Indonesian Female";
+            voice = "English Female";
         }
 
     }
@@ -318,7 +326,7 @@ include_once("config.php");
             }
             else if(res.status == 401)
             {
-                console.log("Aktivitas gagal ditambah ke database");
+                console.log("Failed to add activity to database");
             }
         }, function(e){
             console.log(e);
@@ -330,7 +338,7 @@ include_once("config.php");
     function countdownRemaining(interval, timeRemaining, timeRefresh)
     {
         timeRemaining -= 1;
-        jQuery("#timeRemaining").html("Waktu untuk melihat aktivitas: " + timeRemaining);
+        jQuery("#timeRemaining").html("Time to look at activity: " + timeRemaining);
         let text = null;
         if(timeRemaining <= 0)
         {
@@ -340,14 +348,14 @@ include_once("config.php");
             let selected_activity = 0;
             if(timesLeft < 10 && timesRight < 10)
             {
-                text = "Belum tahu mau ngapain";
+                text = "Still don't know what to do";
                 document.getElementById("iWantTo").style.backgroundColor = "pink";
             }
             else if(timesLeft >= timesRight * 7/3 && timesLeft >= notDetected * 7/3)
             {
                 cbo = document.getElementById("chosenLeftOption");
                 let leftActivity = cbo.options[cbo.selectedIndex].text;
-                text = "Saya mau " + leftActivity;
+                text = "I want to " + leftActivity;
                 //window.location.href = 'makanApa.php'
                 document.getElementById("iWantTo").style.backgroundColor = "deepskyblue";
                 selected_activity = $('#chosenLeftOption option:selected').val();
@@ -356,15 +364,15 @@ include_once("config.php");
             {
                 cbo = document.getElementById("chosenRightOption");
                 let rightActivity = cbo.options[cbo.selectedIndex].text;
-                text = "Saya mau " + rightActivity;
+                text = "I want to " + rightActivity;
                 document.getElementById("iWantTo").style.backgroundColor = "yellow";
                 //window.location.href = 'minumApa.php'
                 selected_activity = $('#chosenRightOption option:selected').val();
             }
             else
             {
-                document.getElementById("iWantTo").innerHTML = "Belum tahu mau ngapain";
-                text = "Belum tahu mau ngapain";
+                document.getElementById("iWantTo").innerHTML = "Still don't know what to do";
+                text = "Still don't know what to do";
                 //window.location.href = 'adl2.html';
             }
             responsiveVoice.speak(text, voice, {volume:volume});
@@ -382,7 +390,7 @@ include_once("config.php");
         return timeRemaining;
     }
     let timeRemaining = $('#time').val();
-	document.getElementById("time").innerHTML = "Waktu untuk melihat aktivitas: " + timeRemaining;
+	document.getElementById("time").innerHTML = "Time to look at activity: " + timeRemaining;
     let timeRefresh = $('#refresh').val();
     let refreshInterval = null;
     let countdownInterval = setInterval(function () {

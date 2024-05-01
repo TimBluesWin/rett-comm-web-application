@@ -30,21 +30,21 @@
             }
             else
             {
-                echo "Bukan file gambar.";
+                echo "Not a picture file.";
                 $uploadOk = 0;
             }
         }
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
         {
-            echo "Maaf, hanya file JPG, JPEG, PNG, and GIF yang diperbolehkan. <br>";
+            echo "Sorry, only files JPG, JPEG, PNG, or GIF are allowed. <br>";
             $uploadOk = 0;
         }
         if($uploadOk == 0)
         {
-            echo "Maaf, file tidak berhasil diunggah.<br>";
-            echo "<br><a href='addCustomActivity.html'>Tambah aktivitas lain</a><br>";
-            echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a><br>";
-            echo "<a href=mainMenu3.php>Balik ke menu utama</a>";
+            echo "Sorry, failed to upload file.<br>";
+            echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
+            echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
+            echo "<a href=mainMenu3.php>Go back to main menu</a>";
         }
         else
         {
@@ -53,24 +53,24 @@
             $target_file = $target_dir . $hashed_file;
             if(move_uploaded_file($_FILES["activityImage"]["tmp_name"], $target_file))
             {
-                echo "File sukses diunggah.<br>";
+                echo "Successfully uploaded file<br>";
                 $statement = $conn->prepare("Insert into list_activities(activity_name_indonesian, activity_file_name) values (?,?)");
                 $statement->bind_param("ss", $name, $file_name);
 
                 $name = $activity;
                 $file_name = $hashed_file;
                 $statement -> execute();
-                echo "<br><a href='addCustomActivity.html'>Tambah aktivitas lain</a><br>";
-                echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a><br>";
-                echo "<a href=mainMenu3.php>Balik ke menu utama</a>";
+                echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
+                echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
+                echo "<a href=mainMenu3.php>Go back to main menu</a>";
 
             }
             else
             {
-                echo "File gagal diunggah.";
-                echo "<br><a href='addCustomActivity.html'>Tambah aktivitas lain</a><br>";
-                echo "<a href='forCaregiver.php'>Balik ke menu pengasuh</a><br>";
-                echo "<a href=mainMenu3.php>Balik ke menu utama</a>";
+                echo "Failed to upload file.";
+                echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
+                echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
+                echo "<a href=mainMenu3.php>Go back to main menu</a>";
             }
         }
 
