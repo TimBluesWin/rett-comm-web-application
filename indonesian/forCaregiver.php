@@ -1,5 +1,6 @@
 <?php
 include("config.php");
+include('changeLanguage.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +10,8 @@ include("config.php");
     </head>
     <body>
     <script src="jquery-3.4.1.min.js"></script>
+    <?php changeLanguageDropDown(); ?>
+    <br>
     <a href="addCustomActivity.html">Tambah aktivitas</a>
     <br>
     <a href="addPatient.html">Tambah Pasien</a>
