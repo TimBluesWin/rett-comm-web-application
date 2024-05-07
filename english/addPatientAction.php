@@ -30,14 +30,14 @@ try {
     else{
         echo "Success.<br> <a href='forCaregiver.php'>Go back to caregiver menu.</a><br>";
         echo "<a href='addPatient.html'>Add another patient<br>";
-        echo "<a href='mainMenu3.php'>Go back to main menu</a>";
+        echo "<a href='mainMenu.php'>Go back to main menu</a>";
     }
 }
 catch (PDOException $e)
 {
     echo "Error. ".$e->getMessage()."<br><br><a href='forCaregiver.php'>Go back to caregiver menu.</a><br>";
     echo "<a href='addPatient.html'>Add another patient<br>";
-    echo "<a href='mainMenu3.php'>Go back to main menu</a>";
+    echo "<a href='mainMenu.php'>Go back to main menu</a>";
 }
 
 

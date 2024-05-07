@@ -53,7 +53,7 @@ include("config.php");
     </select>
     the most often at the following time: <br>
     <div id="activityHabit"></div>
-    <a href="mainMenu3.php">Go back to the main menu</a>
+    <a href="mainMenu.php">Go back to the main menu</a>
     <script>
         function determineFromTime()
         {

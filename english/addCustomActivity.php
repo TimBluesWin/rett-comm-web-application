@@ -45,7 +45,7 @@
             echo "Sorry, failed to upload file.<br>";
             echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
             echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
-            echo "<a href=mainMenu3.php>Go back to main menu</a>";
+            echo "<a href=mainMenu.php>Go back to main menu</a>";
         }
         else
         {
@@ -63,7 +63,7 @@
                 $statement -> execute();
                 echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
                 echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
-                echo "<a href=mainMenu3.php>Go back to main menu</a>";
+                echo "<a href=mainMenu.php>Go back to main menu</a>";
 
             }
             else
@@ -71,7 +71,7 @@
                 echo "Failed to upload file.";
                 echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
                 echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
-                echo "<a href=mainMenu3.php>Go back to main menu</a>";
+                echo "<a href=mainMenu.php>Go back to main menu</a>";
             }
         }
 
