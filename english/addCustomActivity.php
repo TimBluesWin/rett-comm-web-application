@@ -12,7 +12,8 @@
             die("Connection error: " . $conn->connect_error);
         }
 
-        $activity = $_POST['activityName'];
+        $activity = $_POST['activityNameIndonesian'];
+        $activityEnglish = $_POST['activityNameEnglish'];
         #specify target directory
         $target_dir = "../images/";
         #specify the path name of the file. The name of the image comes from the 'activity_image'
@@ -54,11 +55,11 @@
             if(move_uploaded_file($_FILES["activityImage"]["tmp_name"], $target_file))
             {
                 echo "Successfully uploaded file<br>";
-                $statement = $conn->prepare("Insert into list_activities(activity_name_indonesian, activity_file_name) values (?,?)");
-                $statement->bind_param("ss", $name, $file_name);
-
+                $statement = $conn->prepare("Insert into list_activities(activity_name_indonesian, activity_name_english, activity_file_name) values (?,?,?)");
                 $name = $activity;
+                $nameEnglish = $activityEnglish;
                 $file_name = $hashed_file;
+                $statement->bind_param("sss", $name, $nameEnglish, $file_name);
                 $statement -> execute();
                 echo "<br><a href='addCustomActivity.html'>Add another activity</a><br>";
                 echo "<a href='forCaregiver.php'>Go back to the caregiver menu</a><br>";
