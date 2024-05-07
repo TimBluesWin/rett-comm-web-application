@@ -11,6 +11,7 @@ include("changeLanguage.php")
     <body>
     <script src="jquery-3.4.1.min.js"></script>
     <?php changeLanguageDropDown(); ?>
+    <br>
     <a href="addCustomActivity.html">Add activity</a>
     <br>
     <a href="addPatient.html">Add patient</a>

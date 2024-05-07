@@ -1,11 +1,13 @@
 <?php
     function changeLanguageDropDown()
     {
+        $url = $_SERVER['REQUEST_URI'];
+
         echo '<label for="language">Language:</label>';
 
         echo '<select name="language" id="language" onchange="changeLanguage()">';
-        echo '<option value="indonesian">Bahasa Indonesia</option>';
-        echo '<option value="english">English</option>';
+        echo '<option value="indonesian"' . (strpos($url, "indonesian")!==false ? ' selected ' : '' ) . '>Indonesian</option>';
+        echo '<option value="english"'. (strpos($url, "english")!==false ? ' selected ' : '' ) .'>English</option>';
         echo '</select>';
     }
 ?>
