@@ -5,6 +5,13 @@
     <title>Add Patient</title>
 </head>
 <body>
+    <label for="language">Bahasa: </label>
+
+    <select name="language" id="language" onchange="changeLanguage()">
+        <option value="indonesian" selected>Bahasa Indonesia</option>
+        <option value="english">Bahasa Inggris</option>
+    </select>
+    <br>
     <a href="forCaregiver.php">Balik ke menu sebelumnya</a>
     <form action="addPatientAction.php" method="POST">
         Nama Depan: <input type="text" id="namaDepan" name="namaDepan" required>
@@ -20,4 +27,27 @@
         <input type="submit" value="Unggah Data Pasien" name="Unggah Data Pasien">
     </form>
 </body>
+<script>
+        function detectLanguage(url)
+    {
+        if(url.indexOf("indonesian") >= 0)
+        {
+            return "indonesian";
+        }
+        else if(url.indexOf("english") >= 0)
+        {
+            return "english";
+        }
+
+    }
+
+    function changeLanguage()
+    {
+        let url = window.location.href;
+        let currentLanguage = detectLanguage(url);
+        let selectedLanguage = document.getElementById('language').value;
+        let newUrl = url.replace(currentLanguage, selectedLanguage);
+        window.location.href = newUrl;
+    }
+</script>
 </html>

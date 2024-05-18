@@ -3,6 +3,13 @@
         <title>Add activity here</title>
     </head>
     <body>
+        <label for="language">Language: </label>
+
+        <select name="language" id="language" onchange="changeLanguage()">
+            <option value="indonesian">Indonesian</option>
+            <option value="english" selected>English</option>
+        </select>
+        <br>
         <a href="forCaregiver.php">Back to previous menu</a>
         <form action="addCustomActivity.php" method="post" enctype="multipart/form-data">
             Activity Name (Indonesian):
@@ -17,4 +24,27 @@
             <input type="submit" value="Unggah aktivitas" name="Unggah Aktivitas">
         </form>
     </body>
+    <script>
+    function detectLanguage(url)
+    {
+        if(url.indexOf("indonesian") >= 0)
+        {
+            return "indonesian";
+        }
+        else if(url.indexOf("english") >= 0)
+        {
+            return "english";
+        }
+
+    }
+
+    function changeLanguage()
+    {
+        let url = window.location.href;
+        let currentLanguage = detectLanguage(url);
+        let selectedLanguage = document.getElementById('language').value;
+        let newUrl = url.replace(currentLanguage, selectedLanguage);
+        window.location.href = newUrl;
+    }
+    </script>
 </html>

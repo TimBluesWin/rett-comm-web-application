@@ -1,4 +1,5 @@
 <?php
+        include('changeLanguage.php');
 
         $servername = "localhost";
         $username = "root";

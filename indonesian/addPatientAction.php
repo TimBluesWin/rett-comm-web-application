@@ -1,5 +1,6 @@
 <?php
 try {
+    include('changeLanguage.php');
     include_once('config.php');
     $firstName = $_POST['namaDepan'];
     $lastName = $_POST['namaBelakang'];
@@ -28,6 +29,7 @@ try {
         die('execute() failed: ' . htmlspecialchars($statement->error));
     }
     else{
+        echo "<br>";
         echo "Sukses.<br> <a href='forCaregiver.php'>Balik ke menu untuk pengasuh.</a><br>";
         echo "<a href='addPatient.html'>Tambah pasien lain<br>";
         echo "<a href='mainMenu.php'>Balik ke menu utama</a>";
@@ -35,6 +37,7 @@ try {
 }
 catch (PDOException $e)
 {
+    echo "<br>";
     echo "Error. ".$e->getMessage()."<br><br><a href='forCaregiver.php'>Balik ke menu untuk pengasuh.</a><br>";
     echo "<a href='addPatient.html'>Tambah pasien lain<br>";
     echo "<a href='mainMenu.php'>Balik ke menu utama</a>";

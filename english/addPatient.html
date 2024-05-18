@@ -5,19 +5,49 @@
     <title>Add Patient</title>
 </head>
 <body>
-    <a href="forCaregiver.php">Balik ke menu sebelumnya</a>
+    <label for="language">Language: </label>
+
+    <select name="language" id="language" onchange="changeLanguage()">
+        <option value="indonesian">Indonesian</option>
+        <option value="english" selected>English</option>
+    </select>
+    <br>
+    <a href="forCaregiver.php">Back to previous menu</a>
     <form action="addPatientAction.php" method="POST">
-        Nama Depan: <input type="text" id="namaDepan" name="namaDepan" required>
+        First name: <input type="text" id="namaDepan" name="namaDepan" required>
         <br>
-        Nama Belakang: <input type="text" id="namaBelakang" name="namaBelakang" required>
+        Last name: <input type="text" id="namaBelakang" name="namaBelakang" required>
         <br>
-        Tanggal Lahir: <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+        Date of Birth: <input type="date" id="tanggalLahir" name="tanggalLahir" required>
         <br>
-        Alamat: <textarea name="alamat" id="alamat" rows="3" cols="50" required></textarea>
+        Address: <textarea name="alamat" id="alamat" rows="3" cols="50" required></textarea>
         <br>
-        Nama Difabilitas: <input type="text" id="difabilitas" name="difabilitas" required>
+        Diffability: <input type="text" id="difabilitas" name="difabilitas" required>
         <br>
-        <input type="submit" value="Unggah Data Pasien" name="Unggah Data Pasien">
+        <input type="submit" value="Unggah Data Pasien" name="Upload patient data">
     </form>
 </body>
+<script>
+    function detectLanguage(url)
+    {
+        if(url.indexOf("indonesian") >= 0)
+        {
+            return "indonesian";
+        }
+        else if(url.indexOf("english") >= 0)
+        {
+            return "english";
+        }
+
+    }
+
+    function changeLanguage()
+    {
+        let url = window.location.href;
+        let currentLanguage = detectLanguage(url);
+        let selectedLanguage = document.getElementById('language').value;
+        let newUrl = url.replace(currentLanguage, selectedLanguage);
+        window.location.href = newUrl;
+    }
+</script>
 </html>

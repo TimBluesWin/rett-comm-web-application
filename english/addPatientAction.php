@@ -1,5 +1,6 @@
 <?php
 try {
+    include('changeLanguage.php');
     include_once('config.php');
     $firstName = $_POST['namaDepan'];
     $lastName = $_POST['namaBelakang'];
@@ -28,14 +29,16 @@ try {
         die('execute() failed: ' . htmlspecialchars($statement->error));
     }
     else{
-        echo "Success.<br> <a href='forCaregiver.php'>Go back to caregiver menu.</a><br>";
+        changeLanguageDropDown();
+        echo "<br>Success.<br> <a href='forCaregiver.php'>Go back to caregiver menu.</a><br>";
         echo "<a href='addPatient.html'>Add another patient<br>";
         echo "<a href='mainMenu.php'>Go back to main menu</a>";
     }
 }
 catch (PDOException $e)
 {
-    echo "Error. ".$e->getMessage()."<br><br><a href='forCaregiver.php'>Go back to caregiver menu.</a><br>";
+    changeLanguageDropDown();
+    echo "<br>Error. ".$e->getMessage()."<br><br><a href='forCaregiver.php'>Go back to caregiver menu.</a><br>";
     echo "<a href='addPatient.html'>Add another patient<br>";
     echo "<a href='mainMenu.php'>Go back to main menu</a>";
 }

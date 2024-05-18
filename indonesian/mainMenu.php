@@ -86,6 +86,7 @@
 <script src="https://code.responsivevoice.org/responsivevoice.js?key=Ih6YLiFZ"></script>
 <?php
 include_once("config.php");
+include_once("changeLanguage.php");
 ?>
 <div class="pictures" style="width:100%; height:100%; z-index:1;">
     <div class="soundContainer">
@@ -106,6 +107,7 @@ include_once("config.php");
         Durasi sebelum refresh:
         <input type="number" label="Jeda untuk refresh" id="refresh" value="10" min="1" required>
         <input type="button" value="Ubah waktu" onclick="changeSomething()">
+        <?php changeLanguageDropDown(); ?> 
     </div>
     <div class="option">
         <img id="optionLeftImage" style="width:100%; height:100%" alt="makan">
